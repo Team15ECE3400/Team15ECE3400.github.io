@@ -1,4 +1,4 @@
-# Lab 4
+Lab 4
 
 # Objective
 
@@ -54,7 +54,7 @@ Upon closer examination of the Getting Started code, we found the segments of co
     // Now, continue listening
     radio.startListening();
 ```
-	The next objective is to edit the code to change the time output into an character array output.
+The next objective is to edit the code to change the time output into an character array output.
 
 ## Sending the entire maze [Shanee] 
 To send information about the entire maze, we created a 2-dimensional array to store the elements of the maze. We also created two integer variables to keep track of the indices of the element being sent. These x and y coordinates, represented by i and j, are updated in the loop function to ensure that the packets of information are sent at the same rate that the receiving end processes it. If a for loop was implemented within the loop function, this would cause inconsistent timing with the receiving end.
