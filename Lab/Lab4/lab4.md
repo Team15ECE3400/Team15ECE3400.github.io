@@ -173,7 +173,6 @@ if(got_item & 10000000)
 ```
 
 ![_](./Lab4Photos/voltagedivider.JPG)
-
 >Figure 4. Voltage divider from Arduino to FPGA.
 
 
@@ -206,7 +205,7 @@ We attempted to implement keeping track of previously explored territory using a
 
 When we tested this, however, we found that all the blocks that we placed conditional statements for permanently were colored blue such that not even the moving red square was not visible. Here’s what we saw:
 
-![_](./Lab4Photos/blueboxes.png)
+![_](./Lab4Photos/blueboxes.jpg)
 > Figure 6. Blue boxes mark explored territory.
 
 We initially thought that this was an initialization issue, however, when we switched the conditionals the same issue was present.
