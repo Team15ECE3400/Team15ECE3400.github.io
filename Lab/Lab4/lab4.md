@@ -202,12 +202,14 @@ end
 This code is run every positive edge of the clock cycle. The conditional statement first checks if the current pixel’s x coordinate is within the range of pixels 30 to 350 and if it’s y coordinate is within the range of pixels 30 to 430. If it is, then the pixel color for this pixel is given the bit string 111_11_11 which assigns it the color white. If the pixel is not within the range of the grid, then its color is given the bit string 000_000_00 - the code for the color black. This is done to all of the pixels within the given range.
 
 ## Mark explored territory
+We attempted to implement keeping track of previously explored territory using an array called visited. The array is of size 4x5 with each square of the array corresponding to a block on the grid. Whenever we visit a square and color it red, we also change the value visited to 1. Afterwards, we hard coded a series of if statements that checks each index of visited. If the square has been visited, then we assign the pixel color to pick. 
 
+When we tested this, however, we found that all the blocks that we placed conditional statements for permanently were colored blue such that not even the moving red square was not visible. Here’s what we saw:
 
 ![_](./Lab4Photos/blueboxes.png)
 > Figure 6. Blue boxes mark explored territory.
 
-
+We initially thought that this was an initialization issue, however, when we switched the conditionals the same issue was present.
 ## Update robot’s movements
 
 To update the robot’s movements we used the least significant bit of the data to signify whether or not the robot has moved. The program executes such that whenever we see a rising edge on this bit (the bit goes from low to high) the robot will have moved and we should update its location on the grid. To keep track of this rising edge we create to registers to store the previous status of the robot (stationary or moving) and the current status. Then whenever the previous value was low and the current value was high we know that the robot moved. 
