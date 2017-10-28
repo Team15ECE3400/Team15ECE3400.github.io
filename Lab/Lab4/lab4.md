@@ -19,7 +19,7 @@ Each packet of data that we send had the following structure:
 To update our location, we decided that we would only update whether or not the robot has moved in the positive or negative x or y direction. The Manhattan Grid like structure of the maze enables us to do this because in one step, the robot can only move in the x or y direction. Additionally, the moved flag will help us check if the robot has actually updated it’s location or not. We define our positive/negative x and y axis based on the starting point on the maze:
 
 ![_](./Lab4Photos/gridbreakdown.png)
->Figure 3. Breakdown of axis and 4x5 grid. 
+>Figure 3. Breakdown of axis and 5x4 grid. 
 
 
 Note that these directions are relative to the robot’s movements. For example, in the first iteration, if the robot moves one step forward in the y direction, our bit values would be 11 (positive, y). Then, if the robot moves to the left by one, our bit values would be 10 (positive, x). If the robot moves down one, then our values would be 01 (negative, y), and so on.
@@ -184,7 +184,7 @@ When wiring, remember to connect common ground and if you use pin 0 or pin 1 on 
 
 ## Making the display grid larger
 
-To make the display grid larger we decided to change the original code to get rid of the arrays from the lab 3 code and make one big 4x5 grid. We chose to give each box a width and height of 80 pixels. Therefore, the grid has a total width of 320 pixels and a height of 400 pixels. In order to make this grid, the pixels within a box of width to height ratio of 4:5 had to be turned to white. We did this by scanning through pixels 30 to 350 in the horizontal direction and pixels 30 to 430 in the vertical direction, and assigning the a pixel color of white within this range. All of the pixels outside of this range are assigned the color black. 
+To make the display grid larger we decided to change the original code to get rid of the arrays from the lab 3 code and make one big 5x4 grid. We chose to give each box a width and height of 80 pixels. Therefore, the grid has a total width of 320 pixels and a height of 400 pixels. In order to make this grid, the pixels within a box of width to height ratio of 4:5 had to be turned to white. We did this by scanning through pixels 30 to 350 in the horizontal direction and pixels 30 to 430 in the vertical direction, and assigning the a pixel color of white within this range. All of the pixels outside of this range are assigned the color black. 
 
 For creating this grid we used the following code:
 
