@@ -190,12 +190,12 @@ For creating this grid we used the following code:
 
 ```
 always @(posedge CLOCK_25) begin 
-		if ((PIXEL_COORD_X > 10'd30) && (PIXEL_COORD_X < 10'd350) && (PIXEL_COORD_Y > 10'd30) && (PIXEL_COORD_Y < 10'd430)) begin
-				PIXEL_COLOR <= 8'b111_111_11;
-		end
-		else begin
-			PIXEL_COLOR <= 8'b000_000_00;
-		end
+	if ((PIXEL_COORD_X > 10'd30) && (PIXEL_COORD_X < 10'd350) && (PIXEL_COORD_Y > 10'd30) && (PIXEL_COORD_Y < 10'd430)) begin
+		PIXEL_COLOR <= 8'b111_111_11;
+	end
+	else begin
+		PIXEL_COLOR <= 8'b000_000_00;
+	end
 end 
 ```
 
