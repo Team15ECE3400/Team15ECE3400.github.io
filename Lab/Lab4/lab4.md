@@ -36,7 +36,7 @@ According to the formula given in the lab handout, our team’s radio identifier
 const uint64_t pipes[2] = { 0x0000000036LL, 0x0000000037LL };
 ```
 
-By default, the Getting Started code outputs the current time every 250 milliseconds. The radio can be switched to transmit mode by pressing T, or switched to receive mode by pressing R. We connected the two radios to two separate laptops, set one to transmit and one to receive, and observed the results,
+By default, the Getting Started code outputs the current time every 250 milliseconds. The radio can be switched to transmit mode by pressing T, or switched to receive mode by pressing R. We connected the two radios to two separate laptops, set one to transmit and one to receive, and observed the results.
 
 Upon closer examination of the Getting Started code, we found the segments of code responsible for transmitting data:
 
@@ -59,7 +59,7 @@ Upon closer examination of the Getting Started code, we found the segments of co
     // Now, continue listening
     radio.startListening();
 ```
-	The next objective is to edit the code to change the time output into an character array output.
+The next objective is to edit the code to change the time output into an character array output.
 
 ## Sending the entire maze [Shanee] 
 To send information about the entire maze, we created a 2-dimensional array to store the elements of the maze. We also created two integer variables to keep track of the indices of the element being sent. These x and y coordinates, represented by i and j, are updated in the loop function to ensure that the packets of information are sent at the same rate that the receiving end processes it. If a for loop was implemented within the loop function, this would cause inconsistent timing with the receiving end.
@@ -91,7 +91,7 @@ int j =0;
 ## Sending maze information [Dan]
 To save time, energy, and have ability to provide more information on one box in the maze, we wrote code to only send new information. We send a string of 8-bits shown in figure x which has a flag bit telling whether the robot has moved. If the flag bit is 0, the arduino on the receiving end does not process the information. If the flag bit is 1, the receiving arduino parses the 8-bit string to update the robot’s new position, whether there are treasures, and location of walls. The transmitting arduino only sends one 8-bit string with the flag bit as 1. If it were to send it twice, the receiving arduino would think the robot moved twice.
 
-‘’’’’
+```
 if (sent) { // Only send data with “flag bit true” once
   sent = 0;
   
@@ -111,7 +111,7 @@ data_transmit = xory<<7 | Direction<<6 | treasure<<4 | wall<<1 | moved;
    
         printf("Now sending %d...",data_transmit);
         ok = radio.write( data_transmit, sizeof(unsigned char) );
-‘’’’’
+```
 [_Here’s a video!_](https://youtu.be/hgYxBadniSU )
 
 
@@ -172,7 +172,7 @@ if(got_item & 10000000)
 	digitalWrite(1,LOW);  //if bit is 0, logic Low
 ```
 
-![_](./Lab4Photos/voltagedivider.JPG)
+![_](./Lab4Photos/voltagedivider.jpg)
 Figure 4. Voltage divider from Arduino to FPGA.
 
 
