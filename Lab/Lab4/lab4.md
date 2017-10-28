@@ -155,9 +155,9 @@ In order to parse the packets, we extracted each bit from the 8 bit package with
 
 ```
 if(got_item & 10000000) 
-	//write to FPGA
+	// do something
    else
-	//write to FPGA
+	// do something else
 ```
 
 We had this setup for arduino digital pins 1-8. To write to the FPGA, we used parallel communication. First, we designed a voltage divider using a 330 ohm and 180 ohm resistor to drop the arduino’s 5 V to approximately 3.3 V. Then, we wired up each arduino pin to the voltage divider (we had 8 voltage dividers in total), and then wired each arduino pin to a respective FPGA pin. We mapped arduino pins 1-8 to pins to GPIO_1_32-GPIO_1_18. 
