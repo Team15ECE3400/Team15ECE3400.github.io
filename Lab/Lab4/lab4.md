@@ -26,7 +26,7 @@ Note that these directions are relative to the robot’s movements. For example,
 
 # Radio
 
-## Setting up the radios [David]
+## Setting up the radios
 First, we downloaded the RF24 Arduino library and the Getting Started code. In terms of hardware, we acquired two radio transceivers and attached them to separate radio breakout headers. The headers connect to arduino digital pins 9 through 13, with a separate wire connecting to the 3.3v power source and one pin connecting to GND.
 
 According to the formula given in the lab handout, our team’s radio identifier numbers are 54 and 55, or 36 and 37 in hexadecimal. We then inserted these values into the radio’s two pipe addresses as follows:
@@ -61,7 +61,7 @@ Upon closer examination of the Getting Started code, we found the segments of co
 ```
 The next objective is to edit the code to change the time output into an character array output.
 
-## Sending the entire maze [Shanee] 
+## Sending the entire maze
 To send information about the entire maze, we created a 2-dimensional array to store the elements of the maze. We also created two integer variables to keep track of the indices of the element being sent. These x and y coordinates, represented by i and j, are updated in the loop function to ensure that the packets of information are sent at the same rate that the receiving end processes it. If a for loop was implemented within the loop function, this would cause inconsistent timing with the receiving end.
 
 ```
@@ -88,7 +88,7 @@ int j =0;
         j++;
 ```
 
-## Sending maze information [Dan]
+## Sending maze information
 To save time, energy, and have ability to provide more information on one box in the maze, we wrote code to only send new information. We send a string of 8-bits shown in figure x which has a flag bit telling whether the robot has moved. If the flag bit is 0, the arduino on the receiving end does not process the information. If the flag bit is 1, the receiving arduino parses the 8-bit string to update the robot’s new position, whether there are treasures, and location of walls. The transmitting arduino only sends one 8-bit string with the flag bit as 1. If it were to send it twice, the receiving arduino would think the robot moved twice.
 
 ```
@@ -172,7 +172,8 @@ if(got_item & 10000000)
 	digitalWrite(1,LOW);  //if bit is 0, logic Low
 ```
 
-![_](./Lab4Photos/voltagedivider.jpg)
+![_](./Lab4Photos/voltagedivider.JPG)
+
 Figure 4. Voltage divider from Arduino to FPGA.
 
 
@@ -181,7 +182,7 @@ When wiring, remember to connect common ground and if you use pin 0 or pin 1 on 
 # FPGA 
 
 
-## Making the display grid larger [Ben]
+## Making the display grid larger
 
 To make the display grid larger we decided to change the original code to get rid of the arrays from the lab 3 code and make one big 4x5 grid. We chose to give each box a width and height of 80 pixels. Therefore, the grid has a total width of 320 pixels and a height of 400 pixels. In order to make this grid, the pixels within a box of width to height ratio of 4:5 had to be turned to white. We did this by scanning through pixels 30 to 350 in the horizontal direction and pixels 30 to 430 in the vertical direction, and assigning the a pixel color of white within this range. All of the pixels outside of this range are assigned the color black. 
 
@@ -200,14 +201,14 @@ end
 
 This code is run every positive edge of the clock cycle. The conditional statement first checks if the current pixel’s x coordinate is within the range of pixels 30 to 350 and if it’s y coordinate is within the range of pixels 30 to 430. If it is, then the pixel color for this pixel is given the bit string 111_11_11 which assigns it the color white. If the pixel is not within the range of the grid, then its color is given the bit string 000_000_00 - the code for the color black. This is done to all of the pixels within the given range.
 
-## Mark explored territory []
+## Mark explored territory
 
 
 ![_](./Lab4Photos/blueboxes.png)
 > Figure 6. Blue boxes mark explored territory.
 
 
-## Update robot’s movements [Erika]
+## Update robot’s movements
 
 To update the robot’s movements we used the least significant bit of the data to signify whether or not the robot has moved. The program executes such that whenever we see a rising edge on this bit (the bit goes from low to high) the robot will have moved and we should update its location on the grid. To keep track of this rising edge we create to registers to store the previous status of the robot (stationary or moving) and the current status. Then whenever the previous value was low and the current value was high we know that the robot moved. 
 
