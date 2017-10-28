@@ -174,7 +174,7 @@ if(got_item & 10000000)
 
 ![_](./Lab4Photos/voltagedivider.JPG)
 
-Figure 4. Voltage divider from Arduino to FPGA.
+>Figure 4. Voltage divider from Arduino to FPGA.
 
 
 When wiring, remember to connect common ground and if you use pin 0 or pin 1 on the arduino, make sure to not use the serial monitor when testing otherwise the transmit/receive function of the pins will be enabled and will cause issues in your display!  
