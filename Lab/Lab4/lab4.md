@@ -1,8 +1,9 @@
-Lab 4
-
-# Objective
+# Lab 4: Objective
 
 The objective of this lab was to integrate radio communication from our robot to our base station and be able to display the robot’s movements in real time. 
+
+![_](./Lab4Photos/lab4block.png)
+>Figure 1. Block diagram of overall communication structure. 
 
 # Communication Method
 
@@ -12,9 +13,13 @@ To communicate between the arduino and the base station, we chose to use paralle
 
 Each packet of data that we send had the following structure: 
 
---------picture and FIGURE 1 ----------
+![_](./Lab4Photos/bitbreakdown.png)
+>Figure 2. Breakdown of packet structure. 
 
 To update our location, we decided that we would only update whether or not the robot has moved in the positive or negative x or y direction. The Manhattan Grid like structure of the maze enables us to do this because in one step, the robot can only move in the x or y direction. Additionally, the moved flag will help us check if the robot has actually updated it’s location or not. We define our positive/negative x and y axis based on the starting point on the maze:
+
+![_](./Lab4Photos/gridbreakdown.png)
+>Figure 3. Breakdown of axis and 4x5 grid. 
 
 
 Note that these directions are relative to the robot’s movements. For example, in the first iteration, if the robot moves one step forward in the y direction, our bit values would be 11 (positive, y). Then, if the robot moves to the left by one, our bit values would be 10 (positive, x). If the robot moves down one, then our values would be 01 (negative, y), and so on.
@@ -31,7 +36,7 @@ According to the formula given in the lab handout, our team’s radio identifier
 const uint64_t pipes[2] = { 0x0000000036LL, 0x0000000037LL };
 ```
 
-By default, the Getting Started code outputs the current time every 250 milliseconds. The radio can be switched to transmit mode by pressing T, or switched to receive mode by pressing R. We connected the two radios to two separate laptops, set one to transmit and one to receive, and observed the results [VIDEO]
+By default, the Getting Started code outputs the current time every 250 milliseconds. The radio can be switched to transmit mode by pressing T, or switched to receive mode by pressing R. We connected the two radios to two separate laptops, set one to transmit and one to receive, and observed the results,
 
 Upon closer examination of the Getting Started code, we found the segments of code responsible for transmitting data:
 
@@ -54,7 +59,7 @@ Upon closer examination of the Getting Started code, we found the segments of co
     // Now, continue listening
     radio.startListening();
 ```
-The next objective is to edit the code to change the time output into an character array output.
+	The next objective is to edit the code to change the time output into an character array output.
 
 ## Sending the entire maze [Shanee] 
 To send information about the entire maze, we created a 2-dimensional array to store the elements of the maze. We also created two integer variables to keep track of the indices of the element being sent. These x and y coordinates, represented by i and j, are updated in the loop function to ensure that the packets of information are sent at the same rate that the receiving end processes it. If a for loop was implemented within the loop function, this would cause inconsistent timing with the receiving end.
@@ -86,7 +91,7 @@ int j =0;
 ## Sending maze information [Dan]
 To save time, energy, and have ability to provide more information on one box in the maze, we wrote code to only send new information. We send a string of 8-bits shown in figure x which has a flag bit telling whether the robot has moved. If the flag bit is 0, the arduino on the receiving end does not process the information. If the flag bit is 1, the receiving arduino parses the 8-bit string to update the robot’s new position, whether there are treasures, and location of walls. The transmitting arduino only sends one 8-bit string with the flag bit as 1. If it were to send it twice, the receiving arduino would think the robot moved twice.
 
-```
+‘’’’’
 if (sent) { // Only send data with “flag bit true” once
   sent = 0;
   
@@ -106,11 +111,11 @@ data_transmit = xory<<7 | Direction<<6 | treasure<<4 | wall<<1 | moved;
    
         printf("Now sending %d...",data_transmit);
         ok = radio.write( data_transmit, sizeof(unsigned char) );
-```
-https://youtu.be/hgYxBadniSU 
+‘’’’’
+[_Here’s a video!_](https://youtu.be/hgYxBadniSU )
 
 
-## Receive packets from radio [Aasta]
+## Receive packets from radio
 
 To receive packets from the radio on the robot, we used the same ping in/ping out configuration. However, before confirming that a packet was sent, the arduino on the base station receives an 8 bit packet via SPI from the radio. For example: 
 
@@ -144,7 +149,7 @@ if ( role == role_pong_back )
 
 ```
 
-## Parse the packets and send to FPGA [Aasta]
+## Parse the packets and send to FPGA
 
 In order to parse the packets, we extracted each bit from the 8 bit package with an if statement that AND’s the bit to extract with a 1. For example, to extract the first bit, our conditional was similar to this:
 
@@ -167,23 +172,49 @@ if(got_item & 10000000)
 	digitalWrite(1,LOW);  //if bit is 0, logic Low
 ```
 
+![_](./Lab4Photos/voltagedivider.JPG)
+Figure 4. Voltage divider from Arduino to FPGA.
+
+
 When wiring, remember to connect common ground and if you use pin 0 or pin 1 on the arduino, make sure to not use the serial monitor when testing otherwise the transmit/receive function of the pins will be enabled and will cause issues in your display!  
-
-
-
-## Making the display grid larger [Ben]
-
-To make the display grid larger we decided to change the original code to get rid of the arrays from the lab 3 code and make one big 4x5 grid. We chose to give each box a width and height of 80 pixels. Therefore, the grid has a total width of 320 pixels and a height of 400 pixels. In order to make this grid, the pixels within a box of width to height ratio of 4:5 had to be turned to white. We did this by scanning through pixels 30 to 350 in the horizontal direction and pixels 30 to 430 in the vertical direction, and assigned the pixel colors in this range
 
 # FPGA 
 
 
-## Mark explored territory [Ben]
+## Making the display grid larger [Ben]
+
+To make the display grid larger we decided to change the original code to get rid of the arrays from the lab 3 code and make one big 4x5 grid. We chose to give each box a width and height of 80 pixels. Therefore, the grid has a total width of 320 pixels and a height of 400 pixels. In order to make this grid, the pixels within a box of width to height ratio of 4:5 had to be turned to white. We did this by scanning through pixels 30 to 350 in the horizontal direction and pixels 30 to 430 in the vertical direction, and assigning the a pixel color of white within this range. All of the pixels outside of this range are assigned the color black. 
+
+For creating this grid we used the following code:
+
+```
+always @(posedge CLOCK_25) begin 
+		if ((PIXEL_COORD_X > 10'd30) && (PIXEL_COORD_X < 10'd350) && (PIXEL_COORD_Y > 10'd30) && (PIXEL_COORD_Y < 10'd430)) begin
+				PIXEL_COLOR <= 8'b111_111_11;
+		end
+		else begin
+			PIXEL_COLOR <= 8'b000_000_00;
+		end
+end 
+```
+
+This code is run every positive edge of the clock cycle. The conditional statement first checks if the current pixel’s x coordinate is within the range of pixels 30 to 350 and if it’s y coordinate is within the range of pixels 30 to 430. If it is, then the pixel color for this pixel is given the bit string 111_11_11 which assigns it the color white. If the pixel is not within the range of the grid, then its color is given the bit string 000_000_00 - the code for the color black. This is done to all of the pixels within the given range.
+
+## Mark explored territory []
+
+
+![_](./Lab4Photos/blueboxes.png)
+> Figure 6. Blue boxes mark explored territory.
 
 
 ## Update robot’s movements [Erika]
 
-To update the robot’s movements we used the least significant bit of the data to signify whether or not the robot has moved. The program executes such that whenever we see a rising edge on this bit (the bit goes from low to high) the robot will have moved and we should update its location on the grid. To keep track of this rising edge we create to registers to store the previous status of the robot (stationary or moving) and the current status. Then whenever the previous value was low and the current value was high we know that the robot moved.
+To update the robot’s movements we used the least significant bit of the data to signify whether or not the robot has moved. The program executes such that whenever we see a rising edge on this bit (the bit goes from low to high) the robot will have moved and we should update its location on the grid. To keep track of this rising edge we create to registers to store the previous status of the robot (stationary or moving) and the current status. Then whenever the previous value was low and the current value was high we know that the robot moved. 
+
+To test this, we set the output of a GPIO pin to the value of our current bit and previous bit and observed the output on the oscilloscope. For example, at the rising edge, the oscilloscope showed the following: 
+
+![_](./Lab4Photos/osctest.jpeg)
+
 
 Additionally, the robot takes in two additional inputs from the arduino: one to indicate movement in the x or y direction and one for positive vs. negative direction. Two registers are used to update the current x and y coordinate of the robot with (0,0) corresponding to the bottom right corner of the maze.
 
@@ -233,9 +264,11 @@ if ((PIXEL_COORD_X >(10'd350 - 10'd80*(x+1))) && (PIXEL_COORD_X <(10'd350 - 10'd
 end
 ```
  
-Each time the robot moves, x and y change so only the current location will be red. Here’s a video showing the VGA output of our grid in addition to LEDs on the FPGA. [VIDEO]
+Each time the robot moves, x and y change so only the current location will be red. [_Here’s a video_](https://youtu.be/V4v4A5UJDsY) showing the VGA output of our grid in addition to LEDs on the FPGA.
 LEDs 1 to 3 show the value of y and LEDs 4 and 5 show the value of x.
 
+![_](./Lab4Photos/redbox.jpg)
+> Figure 7. Current location marked by red box.
 
 
 
