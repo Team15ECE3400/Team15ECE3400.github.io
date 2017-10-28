@@ -216,7 +216,7 @@ To update the robot’s movements we used the least significant bit of the data 
 To test this, we set the output of a GPIO pin to the value of our current bit and previous bit and observed the output on the oscilloscope. For example, at the rising edge, the oscilloscope showed the following: 
 
 ![_](./Lab4Photos/osctest.jpeg)
-
+>Figure 7. Output of a GPIO Pin
 
 Additionally, the robot takes in two additional inputs from the arduino: one to indicate movement in the x or y direction and one for positive vs. negative direction. Two registers are used to update the current x and y coordinate of the robot with (0,0) corresponding to the bottom right corner of the maze.
 
@@ -270,7 +270,7 @@ Each time the robot moves, x and y change so only the current location will be r
 LEDs 1 to 3 show the value of y and LEDs 4 and 5 show the value of x.
 
 ![_](./Lab4Photos/redbox.jpg)
-> Figure 7. Current location marked by red box.
+> Figure 8. Current location marked by red box.
 
 
 
