@@ -14,7 +14,7 @@ The reason we generate a value between 0 and 16 is that we have a 4 bit value wh
 
 For example, if we were in the starting grid, there would definitely be walls at the edges of the map. This means there would be a wall south and west of the robot, and our bit value would be 0101, which corresponds to an integer value of 5. Therefore, 5 would be stored in map[5][4] and then later be extracted and evaluated bitwise. 
 
-![](https://github.com/Team15ECE3400/Team15ECE3400.github.io/blob/master/Milestones/Milestone3/table.png)
+![](table.png)
 >Figure 1. Representation of the array as a table.
 
 Then, we attempted to implement depth first search. 
@@ -61,7 +61,7 @@ The priority set by Team Alpha was to go North, then East, then West, then South
 
 We did this by re-organizing and reordering the same code used for the N->E->W->S. To pick and choose which priority is evaluated and added to the stack first, we defined another layer of priorities (N->E->W->S). Then, we extracted the bits of number of walls for each adjacent node to the current node. For example, if we’re at the starting node (5,4), we check if the node one above and one to the side (all the adjacent nodes) have walls opposite the robot. If a wall exists, we add that to our stack and traverse that sequence first. This is so that our robot prioritizes dead ends, which would reduce our net run time. If we do not detect a potential dead end, however, we will perform the usual Depth First Search algorithm for the grid, prioritizing N->E->W->S movement respectively.
 
-![_](https://github.com/Team15ECE3400/Team15ECE3400.github.io/blob/master/Milestones/Milestone3/robot%20thought%20process.gif)
+![_](robot%20thought%20process.gif)
 >Figure 2. A brief demonstration of the dead end test.
 
 This logic, however, has certain bugs. Sometimes, the simulated robot crosses through walls, or gets stuck in an infinite loop. We will be hard at work debugging and optimizing this simulation code!
