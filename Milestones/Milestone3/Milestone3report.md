@@ -94,6 +94,7 @@ Because the printing code was not fully functional, we decided to use Team Alpha
 
 Here are two videos of different mazes being traversed using our optimized MATLAB code:
 https://www.youtube.com/watch?v=6Zu98qTwnqI
+
 https://www.youtube.com/watch?v=RFTx1h-2QFw
 
 ## Maze Simulation of Algorithm
