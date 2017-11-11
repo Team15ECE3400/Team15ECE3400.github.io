@@ -11,7 +11,8 @@ The reason we generate a value between 0 and 16 is that we have a 4 bit value wh
 
 For example, if we were in the starting grid, there would definitely be walls at the edges of the map. This means there would be a wall south and west of the robot, and our bit value would be 0101, which corresponds to an integer value of 5. Therefore, 5 would be stored in map[5][4] and then later be extracted and evaluated bitwise. 
 
-(INSERT TABLE)
+![](https://github.com/Team15ECE3400/Team15ECE3400.github.io/blob/master/Milestones/Milestone3/table.png)
+>Figure x. Representation of the array as a table
 
 Then, we attempted to implement depth first search. 
 
