@@ -33,11 +33,17 @@ To traverse the maze, we first create a stack (last in, first out) to store visi
 Our while loop runs until our visited stack is empty. Here are the steps we take to implement DFS:
 
 > Set current position to the top of the stack (current node you are at)
+
 > Pop the top of the stack and mark that node as visited (update the flag)
+
 > Update the current x and y location from the popped node
+
 > Access the map array that stores wall information using bitset. What this does is takes the value stored in our wall location grid and converts it into a 4 element array of 1 or 0
+
 > We then evaluate the value of each character, which represents a direction (as described above). We check for North, South, East and West if a wall exists (character = 0) and assign it the opposite of if visited. 
+
 > Then, we evaluate if we should go in each direction and if we do, we push onto the visited stack. 
+
 > We continue this process until all nodes are visited and the stack is empty. 
 
 To optimize the code, we decided to think about priority first. In other words, we thought about which direction our robot would travel next, and what factors would influence it.
