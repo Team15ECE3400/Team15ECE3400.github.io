@@ -92,6 +92,14 @@ We attempted to print the entire maze using the console. Though a visual represe
 
 Because the printing code was not fully functional, we decided to use Team Alpha’s example and optimize it using Matlab’s GUI. 
 
+Because the printing code was not fully functional, we decided to use Team Alpha’s example and optimize it using MATLAB’s GUI. This code also implements a depth-first search using a stack that holds future positions for the robot. The actual search is done using a while loop that continues to loop as long as the stack is not empty and all of the positions in the maze have not been visited. 
+
+```
+while (~stack.isempty || all_visited)
+```
+
+To create the initial maze, the function draw_walls is called to put the walls in the correct places. A similar scheme is used for assigning the walls in each cell as the one described in the previous section. Each cell is assigned a four-bit value: a high first bit (LSB) gives the cell a north wall, the second bit represents the south wall, the third bit represents the east wall, and the last bit (MSB) represents the west wall. After the maze is created, the while loop runs and the robot traverses the maze bases on the priority that we decided on – North-East-West-South. 
+
 Here are two videos of different mazes being traversed using our optimized MATLAB code:
 
 https://www.youtube.com/watch?v=6Zu98qTwnqI
