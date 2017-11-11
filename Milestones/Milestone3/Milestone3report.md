@@ -12,7 +12,7 @@ The reason we generate a value between 0 and 16 is that we have a 4 bit value wh
 For example, if we were in the starting grid, there would definitely be walls at the edges of the map. This means there would be a wall south and west of the robot, and our bit value would be 0101, which corresponds to an integer value of 5. Therefore, 5 would be stored in map[5][4] and then later be extracted and evaluated bitwise. 
 
 ![](https://github.com/Team15ECE3400/Team15ECE3400.github.io/blob/master/Milestones/Milestone3/table.png)
->Figure x. Representation of the array as a table
+>Figure 1. Representation of the array as a table.
 
 Then, we attempted to implement depth first search. 
 
@@ -26,29 +26,29 @@ int y; //y location
 }; 
 ```
 
-This Node represents a box on a grid, which was represented by a multidimensional 5x4 array of Nodes. Each Node contains the x and y location of the grid (because the index can’t be extracted if we are not looping over the grid) and a flag to check if the Node has been visited or not. 
+This Node represents a box on a grid, which was represented by a multidimensional 5x4 array of Nodes (as represented in fig. 1). Each Node contains the x and y location of the grid (because the index can’t be extracted if we are not looping over the grid) and a flag to check if the Node has been visited or not. 
 
 To traverse the maze, we first create a stack (last in, first out) to store visited nodes. Then, we create our multidimensional array of nodes and initialize each nodes x, y and visited value (visited = 0). Then, we push the starting Node (maze[5][4]) onto the stack.
 
 Our while loop runs until our visited stack is empty. Here are the steps we take to implement DFS:
 
-> Set current position to the top of the stack (current node you are at)
+> Set current position to the top of the stack (current node robot is at).
 
-> Pop the top of the stack and mark that node as visited (update the flag)
+> Pop the top of the stack and mark that node as visited (update the flag).
 
-> Update the current x and y location from the popped node
+> Update the current x and y location from the popped node.
 
-> Access the map array that stores wall information using bitset. What this does is takes the value stored in our wall location grid and converts it into a 4 element array of 1 or 0
+> Access the map array that stores wall information using bitset. What this does is take the value stored in our wall location grid and convert it into a 4 element array of 1 or 0.
 
 > We then evaluate the value of each character, which represents a direction (as described above). We check for North, South, East and West if a wall exists (character = 0) and assign it the opposite of if visited. 
 
 > Then, we evaluate if we should go in each direction and if we do, we push onto the visited stack. 
 
-> We continue this process until all nodes are visited and the stack is empty. 
+> We continue this process until the stack is empty, indicating that all nodes are visited. 
 
 To optimize the code, we decided to think about priority first. In other words, we thought about which direction our robot would travel next, and what factors would influence it.
 
-The priority set by Team Alpha was go North, then East, then West, then South. This traversal only allows the robot to turn left and visit unvisited nodes. However, the robot can detect walls approximately 30 cm in front of it, which means that we can see a walls opposite to our robot in adjacent nodes. To incorporate this, we added three more priorities: 
+The priority set by Team Alpha was to go North, then East, then West, then South. This traversal encourages the robot to go forwards to  visit unexplored nodes, ignoring any branching paths. However, because the robot can detect walls approximately 30 cm in front of it, we can see a walls opposite to our robot in adjacent nodes. We decided that we could make our traversal much more efficient by implementing a dead-end detection algorithm. To incorporate this, we added three more priorities: 
 
 > East -> South -> West -> North
 
@@ -56,7 +56,7 @@ The priority set by Team Alpha was go North, then East, then West, then South. T
 
 > South -> West -> East -> North
 
-We did this by re-organizing and reordering the same code used for the N->E->W->S. To pick and choose which priority is evaluated and added to the stack first, we defined another layer of priorities (N->E->W->S). Then, we extracted the bits of number of walls for each adjacent node to the current node. For example, if we’re at the starting node (5,4), we check if the node one above and one to the side (all the adjacent nodes) have walls opposite the robot. If a wall exists, we add that to our stack and traverse that sequence first. This is so that our robot prioritizes dead ends, which would reduce our net run time. If we do not detect a potential dead end, however, we add the next set.
+We did this by re-organizing and reordering the same code used for the N->E->W->S. To pick and choose which priority is evaluated and added to the stack first, we defined another layer of priorities (N->E->W->S). Then, we extracted the bits of number of walls for each adjacent node to the current node. For example, if we’re at the starting node (5,4), we check if the node one above and one to the side (all the adjacent nodes) have walls opposite the robot. If a wall exists, we add that to our stack and traverse that sequence first. This is so that our robot prioritizes dead ends, which would reduce our net run time. If we do not detect a potential dead end, however, we will perform the usual Depth First Search algorithm for the grid, prioritizing N->E->W->S movement respectively.
 
 ![_](https://github.com/Team15ECE3400/Team15ECE3400.github.io/blob/master/Milestones/Milestone3/robot%20thought%20process.gif)
 >Figure x. A brief demonstration of the dead end test.
