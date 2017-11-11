@@ -1,5 +1,8 @@
 # Milestone 3
-## Simulation Search Method
+
+## Simulation
+
+### Simulation Search Method
 
 For the simulation, we referred to Team Alpha’s Code initially to implement depth first search. First, we ran their GUI and looked at the various example mazes, and then tried to implement a similar version of the simulation in C++. 
 
@@ -63,7 +66,7 @@ We did this by re-organizing and reordering the same code used for the N->E->W->
 
 This logic, however, has certain bugs. Sometimes, the simulated robot crosses through walls, or gets stuck in an infinite loop. We will be hard at work debugging and optimizing this simulation code!
 
-## Representing the Maze
+### Representing the Maze
 
 We attempted to print the entire maze using the console. Though a visual representation of the maze is useful for testing purposes, the result of this is difficult to interpret, and requires to be printed anew every time the robot moves a square. As such, this is an inefficient and unsightly method of presenting our solution. The code we used for the console representation is below, followed by a sample generated maze:
 
@@ -108,9 +111,9 @@ https://www.youtube.com/watch?v=6Zu98qTwnqI
 
 https://www.youtube.com/watch?v=RFTx1h-2QFw
 
-## Maze Simulation of Algorithm
+## Real Life Implementation
 
-## Real Life Maze Algorithm
+### Real Life Maze Algorithm
 Our first task for the real life algorithm that facilitates maze exploration was to merge line following code, IR wall detecting code, and the algorithm code. The line following and IR wall detecting code was completed in a previous lab and milestone. The algorithm was recently made and is based off of the algorithm used in Matlab simulation. We converted the C++ code to Arduino. We replaced the stack library with [_StackArray_](https://playground.arduino.cc/Code/StackArray), and bitset with built in Arduino [_integer to bit conversion_](https://www.arduino.cc/en/Reference/BitRead). However, we replaced the random maze generation with outputs from the IR wall-detecting sensors. 
 
 We first started with merging the IR wall detecting code and algorithm code into the line following code. Line following code was turned into the function LineFollowing() and runs at all times in the main loop except for when the robot approaches a black line crossing. The LineFollowing() function has an if case that performs the logic for line following (discussed in milestone 1) and checks for a black line crossing. If a black line crossing is detected, the maze exploration algorithm traverse() is called. When traverse() is executed, it immediately calls the infrared wall detecting function IR() to determine locations of walls relative to the robot at its current black line intersection. After IR() is completed, the traverse() function continues and updates visited in the maze's array and determines which way to turn the robot based on the locations of walls and the current state of visited nodes. One of the boolean global variables "turn180", "turnRight", "turnLeft", and "goStraight" is assigned 1 in traverse(), determined by the algorithm which is discussed in later paragraph, and when the CPU pointer returns to the main loop(), one of the if statements for controlling manuevers is entered and moves the robot left 90 degrees, right 90 degrees, forward 0 degrees, or turnaround 180 degrees.
