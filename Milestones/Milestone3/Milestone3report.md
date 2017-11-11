@@ -107,9 +107,9 @@ To create the initial maze, the function draw_walls is called to put the walls i
 
 Here are two videos of different mazes being traversed using our optimized MATLAB code:
 
-[_Video 1_]https://www.youtube.com/watch?v=6Zu98qTwnqI
+[_Video 1_](https://www.youtube.com/watch?v=6Zu98qTwnqI)
 
-[_Video 2_]https://www.youtube.com/watch?v=RFTx1h-2QFw
+[_Video 2_](https://www.youtube.com/watch?v=RFTx1h-2QFw)
 
 ## Real Life Implementation
 
