@@ -1,4 +1,84 @@
 # Milestone 3
+## Simulation Search Method
+
+For the simulation, we referred to Team Alpha’s Code initially to implement depth first search. First, we ran their GUI and looked at the various example mazes, and then tried to implement a similar version of the simulation in C++. 
+
+The reason we chose C++ was because it was later easier to configure to arduino code while also having a wide array of libraries to use. 
+
+To generate randomized mazes, we first created a global multidimensional array of int’s that stored where the walls of the maze were. In our generate_maze function, we iterated through our map array (with nested for loops), to generate a random integer value between 0 and 16 using the rand() function in C++. We calculated this value by taking one plus rand() mod 1000, and dividing that by zero. Essentially, we the output is a value between 0 and 2 which is then rounded up or down. We add this value four times to generate four random values that then add up to 16. This integer was then stored in the respective location in map. 
+
+The reason we generate a value between 0 and 16 is that we have a 4 bit value which can then be translated into whether there is a wall or not. Basically, each bit represents a defined wall direction (North, South, East, West), where North is the most significant bit and West is the least significant bit. 
+
+For example, if we were in the starting grid, there would definitely be walls at the edges of the map. This means there would be a wall south and west of the robot, and our bit value would be 0101, which corresponds to an integer value of 5. Therefore, 5 would be stored in map[5][4] and then later be extracted and evaluated bitwise. 
+
+(INSERT TABLE)
+
+Then, we attempted to implement depth first search. 
+
+The libraries that we relied on were stdio.h (default library), iostream (to be able to print on the console), stack (data structure) and bitset (used to extract bit values from integers). First we defined a struct as such: 
+
+``` 
+struct Node {
+char visited = 0; //check if visited
+int x; //x location
+int y; //y location
+}; 
+```
+
+This Node represents a box on a grid, which was represented by a multidimensional 5x4 array of Nodes. Each Node contains the x and y location of the grid (because the index can’t be extracted if we are not looping over the grid) and a flag to check if the Node has been visited or not. 
+
+To traverse the maze, we first create a stack (last in, first out) to store visited nodes. Then, we create our multidimensional array of nodes and initialize each nodes x, y and visited value (visited = 0). Then, we push the starting Node (maze[5][4]) onto the stack.
+
+Our while loop runs until our visited stack is empty. Here are the steps we take to implement DFS:
+
+> Set current position to the top of the stack (current node you are at)
+> Pop the top of the stack and mark that node as visited (update the flag)
+> Update the current x and y location from the popped node
+> Access the map array that stores wall information using bitset. What this does is takes the value stored in our wall location grid and converts it into a 4 element array of 1 or 0
+> We then evaluate the value of each character, which represents a direction (as described above). We check for North, South, East and West if a wall exists (character = 0) and assign it the opposite of if visited. 
+> Then, we evaluate if we should go in each direction and if we do, we push onto the visited stack. 
+> We continue this process until all nodes are visited and the stack is empty. 
+
+To optimize the code, we decided to think about priority first. In other words, we thought about which direction our robot would travel next, and what factors would influence it.
+
+The priority set by Team Alpha was go North, then East, then West, then South. This traversal only allows the robot to turn left and visit unvisited nodes. However, the robot can detect walls approximately 30 cm in front of it, which means that we can see a wall in front of the robot in an adjacent node. To incorporate this, we added three more priorities: 
+
+> East -> South -> West -> North
+> West -> North -> East -> South
+> South -> West -> East -> North
+
+We did this by re-organizing and reordering the same code used for the N->E->W->S. To pick and choose which priority is evaluated and added to the stack first, we defined another layer of priorities (N->E->W->S). Then, we extracted the bits of number of walls for each adjacent node to the current node. For example, if we’re at the starting node (5,4), we check if the node one above and one to the side (all the adjacent nodes) have walls opposite the robot. If a wall exists, we add that to our stack and traverse that sequence first. This is so that our robot prioritizes dead ends, which would reduce our net run time. If we do not detect a potential dead end, however, we add the next set.
+
+![_](./Milestone3/robot thought process.gif)
+>Figure x. A brief demonstration of the dead end test.
+
+This logic, however, has certain bugs. Sometimes, the simulated robot crosses through walls, or gets stuck in an infinite loop. We will be hard at work debugging and optimizing this simulation code!
+
+## Representing the Maze
+
+We attempted to print the entire maze using the console. Though a visual representation of the maze is useful for testing purposes, the result of this is difficult to interpret, and requires to be printed anew every time the robot moves a square. As such, this is an inefficient and unsightly method of presenting our solution. The code we used for the console representation is below, followed by a sample generated maze:
+
+```    for (int i = 0; i<5; i++) {
+	    for (int j = 0; j<4; j++) {
+		    if (map[i][j].wall_W) { cout << "["; } else { cout << " "; }
+		    if (map[i][j].wall_S && map[i][j].wall_N) { cout << "="; }
+		    else if (map[i][j].wall_S) { cout << "_"; }
+		    else if (map[i][j].wall_N) { cout << "-"; }
+		    else { cout << " ";}
+		    if (map[i][j].wall_E) { cout << "]"; } else { cout << " "; }
+	    }
+	    cout << endl;
+	}
+	cout << endl;
+
+```
+    _  -   ]                                                                                                             
+  ]   [- [                                                                                                                                       
+[  [  [                                                                                                                                          
+ _     - [                                                                                                                                       
+[ ]  ]    =   
+
+Because the printing code was not fully functional, we decided to use Team Alpha’s example and optimize it using Matlab’s GUI. 
 
 ## Maze Simulation of Algorithm
 
