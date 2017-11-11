@@ -59,7 +59,7 @@ The priority set by Team Alpha was to go North, then East, then West, then South
 We did this by re-organizing and reordering the same code used for the N->E->W->S. To pick and choose which priority is evaluated and added to the stack first, we defined another layer of priorities (N->E->W->S). Then, we extracted the bits of number of walls for each adjacent node to the current node. For example, if we’re at the starting node (5,4), we check if the node one above and one to the side (all the adjacent nodes) have walls opposite the robot. If a wall exists, we add that to our stack and traverse that sequence first. This is so that our robot prioritizes dead ends, which would reduce our net run time. If we do not detect a potential dead end, however, we will perform the usual Depth First Search algorithm for the grid, prioritizing N->E->W->S movement respectively.
 
 ![_](https://github.com/Team15ECE3400/Team15ECE3400.github.io/blob/master/Milestones/Milestone3/robot%20thought%20process.gif)
->Figure x. A brief demonstration of the dead end test.
+>Figure 2. A brief demonstration of the dead end test.
 
 This logic, however, has certain bugs. Sometimes, the simulated robot crosses through walls, or gets stuck in an infinite loop. We will be hard at work debugging and optimizing this simulation code!
 
@@ -90,7 +90,7 @@ cout << endl;
  _     - [                                                                                                                                       
 [ ]  ]    =  
 ```
-
+>Figure 3. The console maze output
 Because the printing code was not fully functional, we decided to use Team Alpha’s example and optimize it using Matlab’s GUI. 
 
 Because the printing code was not fully functional, we decided to use Team Alpha’s example and optimize it using MATLAB’s GUI. This code also implements a depth-first search using a stack that holds future positions for the robot. The actual search is done using a while loop that continues to loop as long as the stack is not empty and all of the positions in the maze have not been visited. 
@@ -155,7 +155,7 @@ LineFollowing(); // perform line following at all times except when at intersect
   }
 }
 ```
->Figure x. Main loop
+>Figure 4. Main loop
 
 
 ### Traverse Algorithm
@@ -292,4 +292,4 @@ void traverse() {
   }
 }
 ```
->Figure x. Maze exploration algorithm
+>Figure 5. Maze exploration algorithm
