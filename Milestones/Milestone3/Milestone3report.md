@@ -48,7 +48,7 @@ Our while loop runs until our visited stack is empty. Here are the steps we take
 
 To optimize the code, we decided to think about priority first. In other words, we thought about which direction our robot would travel next, and what factors would influence it.
 
-The priority set by Team Alpha was go North, then East, then West, then South. This traversal only allows the robot to turn left and visit unvisited nodes. However, the robot can detect walls approximately 30 cm in front of it, which means that we can see a wall in front of the robot in an adjacent node. To incorporate this, we added three more priorities: 
+The priority set by Team Alpha was go North, then East, then West, then South. This traversal only allows the robot to turn left and visit unvisited nodes. However, the robot can detect walls approximately 30 cm in front of it, which means that we can see a walls opposite to our robot in adjacent nodes. To incorporate this, we added three more priorities: 
 
 > East -> South -> West -> North
 
