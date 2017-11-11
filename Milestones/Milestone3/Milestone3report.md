@@ -81,6 +81,7 @@ We attempted to print the entire maze using the console. Though a visual represe
 	cout << endl;
 
 ```
+
 ```
     _  -   ]                                                                                                             
   ]   [- [                                                                                                                                       
@@ -90,6 +91,10 @@ We attempted to print the entire maze using the console. Though a visual represe
 ```
 
 Because the printing code was not fully functional, we decided to use Team Alpha’s example and optimize it using Matlab’s GUI. 
+
+Here are two videos of different mazes being traversed using our optimized MATLAB code:
+https://www.youtube.com/watch?v=6Zu98qTwnqI
+https://www.youtube.com/watch?v=RFTx1h-2QFw
 
 ## Maze Simulation of Algorithm
 
