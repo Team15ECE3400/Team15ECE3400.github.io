@@ -67,18 +67,19 @@ This logic, however, has certain bugs. Sometimes, the simulated robot crosses th
 
 We attempted to print the entire maze using the console. Though a visual representation of the maze is useful for testing purposes, the result of this is difficult to interpret, and requires to be printed anew every time the robot moves a square. As such, this is an inefficient and unsightly method of presenting our solution. The code we used for the console representation is below, followed by a sample generated maze:
 
-```    for (int i = 0; i<5; i++) {
-	    for (int j = 0; j<4; j++) {
-		    if (map[i][j].wall_W) { cout << "["; } else { cout << " "; }
-		    if (map[i][j].wall_S && map[i][j].wall_N) { cout << "="; }
-		    else if (map[i][j].wall_S) { cout << "_"; }
-		    else if (map[i][j].wall_N) { cout << "-"; }
-		    else { cout << " ";}
-		    if (map[i][j].wall_E) { cout << "]"; } else { cout << " "; }
-	    }
-	    cout << endl;
+```   
+for (int i = 0; i<5; i++) {
+	for (int j = 0; j<4; j++) {
+		if (map[i][j].wall_W) { cout << "["; } else { cout << " "; }
+	        if (map[i][j].wall_S && map[i][j].wall_N) { cout << "="; }
+       	        else if (map[i][j].wall_S) { cout << "_"; }
+	        else if (map[i][j].wall_N) { cout << "-"; }
+		else { cout << " ";}
+		if (map[i][j].wall_E) { cout << "]"; } else { cout << " "; }
 	}
-	cout << endl;
+    	cout << endl;
+}
+cout << endl;
 
 ```
 
