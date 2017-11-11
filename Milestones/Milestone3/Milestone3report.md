@@ -98,7 +98,7 @@ Because the printing code was not fully functional, we decided to use Team Alpha
 while (~stack.isempty || all_visited)
 ```
 
-To create the initial maze, the function draw_walls is called to put the walls in the correct places. A similar scheme is used for assigning the walls in each cell as the one described in the previous section. Each cell is assigned a four-bit value: a high first bit (LSB) gives the cell a north wall, the second bit represents the south wall, the third bit represents the east wall, and the last bit (MSB) represents the west wall. After the maze is created, the while loop runs and the robot traverses the maze bases on the priority that we decided on – North-East-West-South. 
+To create the initial maze, the function draw_walls is called to put the walls in the correct places. A similar scheme is used for assigning the walls in each cell as the one described in the previous section. Each cell is assigned a four-bit value: a high first bit (LSB) gives the cell a north wall, the second bit represents the south wall, the third bit represents the east wall, and the last bit (MSB) represents the west wall. After the maze is created, the while loop runs and the robot traverses the maze based on the priority that we decided on – North-East-West-South – and the possible presence of dead ends. 
 
 Here are two videos of different mazes being traversed using our optimized MATLAB code:
 
