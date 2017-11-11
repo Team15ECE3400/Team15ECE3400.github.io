@@ -72,11 +72,13 @@ We attempted to print the entire maze using the console. Though a visual represe
 	cout << endl;
 
 ```
+```
     _  -   ]                                                                                                             
   ]   [- [                                                                                                                                       
 [  [  [                                                                                                                                          
  _     - [                                                                                                                                       
-[ ]  ]    =   
+[ ]  ]    =  
+```
 
 Because the printing code was not fully functional, we decided to use Team Alpha’s example and optimize it using Matlab’s GUI. 
 
