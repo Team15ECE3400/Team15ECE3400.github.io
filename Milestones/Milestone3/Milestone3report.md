@@ -90,7 +90,8 @@ cout << endl;
  _     - [                                                                                                                                       
 [ ]  ]    =  
 ```
->Figure 3. The console maze output
+>Figure 3. The console maze output.
+
 Because the printing code was not fully functional, we decided to use Team Alpha’s example and optimize it using Matlab’s GUI. 
 
 Because the printing code was not fully functional, we decided to use Team Alpha’s example and optimize it using MATLAB’s GUI. This code also implements a depth-first search using a stack that holds future positions for the robot. The actual search is done using a while loop that continues to loop as long as the stack is not empty and all of the positions in the maze have not been visited. 
