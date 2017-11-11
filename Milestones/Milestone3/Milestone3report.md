@@ -5,9 +5,16 @@
 ## Real Life Maze Algorithm
 Our first task for the real life algorithm that facilitates maze exploration was to merge line following code, IR wall detecting code, and the algorithm code. The line following and IR wall detecting code was completed in a previous lab and milestone. The algorithm was recently made and is based off of the algorithm used in Matlab simulation.
 
-We started off by...
+We first started with merging the IR wall detecting code and algorithm code into the line following code. Line following code was turned into the function LineFollowing() and runs at all times in the main loop except for when the robot approaches a black line crossing. The LineFollowing() function has an if case that checks for a black line crossing, and if detected, runs the maze exploration algorithm traverse(). When the traverse() function is called, it calls the infrared wall detecting function IR() to determine locations of walls relative to the robot. After IR() is completed, the traverse() function updates visited in the maze's array and determines which way to turn the robot based on the locations of walls and the current state of visited nodes. One of the boolean global variables "turn180", "turnRight", "turnLeft", and "goStraight" is assigned 1 in traverse() and when the CPU pointer returns to the main loop(), one of the if statements for controlling manuevers is entered and moves the robot left 90 degrees, right 90 degrees, forwards 0 degrees, or turnaround 180 degrees.
 
-### loop
+The traverse() algorithm is a depth-first search (DFS) algorithm that makes going straight highest priority, turning right second highest priority, and turning left as lowest priority. A global stack with nodes is used to keep track of visited, and is used to tell the robot to go N, S, E, or W. The maze exploration algorithm was heavily based on the matlab version, where matlab version had advanted of easily maintaining the four cardinal directions NSEW. However, our robot changes direction often, so we had to add logic to maintain the integrity of our heading. We use a global variable "direction" to keep track of which way the robot is facing and use this variable to help the algorithm make decisions. The direction variable takes on four values: 0 is North, 1 is East, 2 is West, and 3 is South. The direction variable is used in conjuction with the variables used to tell the robot to go N, S, E, or W to decide whether to turn right, left, go straight, or turn around. We created for large if statedments for this purpose.
+
+When the robot has finished exporing the maze, it spins in circles indefinitely. In future weeks we will implement a light or sound signal to indicate that the robot has completed maze exploration.
+
+We were not able to finish troubleshooting this code in lab, so we have no footage to show the potential of our logic. We have identified our code's issues however, which include inability to ... ? (need to list at least 3 flaws)
+
+
+### Main Loop
 ```
 void loop() {
 
