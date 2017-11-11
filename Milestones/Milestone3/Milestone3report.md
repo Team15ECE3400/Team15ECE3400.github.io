@@ -49,7 +49,7 @@ The priority set by Team Alpha was go North, then East, then West, then South. T
 
 We did this by re-organizing and reordering the same code used for the N->E->W->S. To pick and choose which priority is evaluated and added to the stack first, we defined another layer of priorities (N->E->W->S). Then, we extracted the bits of number of walls for each adjacent node to the current node. For example, if we’re at the starting node (5,4), we check if the node one above and one to the side (all the adjacent nodes) have walls opposite the robot. If a wall exists, we add that to our stack and traverse that sequence first. This is so that our robot prioritizes dead ends, which would reduce our net run time. If we do not detect a potential dead end, however, we add the next set.
 
-![_](./Milestone3/robot thought process.gif)
+![_](Team15ECE3400.github.io/Milestones/Milestone3/robot thought process.gif)
 >Figure x. A brief demonstration of the dead end test.
 
 This logic, however, has certain bugs. Sometimes, the simulated robot crosses through walls, or gets stuck in an infinite loop. We will be hard at work debugging and optimizing this simulation code!
