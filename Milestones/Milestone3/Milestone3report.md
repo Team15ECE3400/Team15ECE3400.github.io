@@ -102,7 +102,7 @@ The traverse() algorithm is a depth-first search (DFS) algorithm that makes goin
 
 When the robot has finished exploring the maze, it spins in circles indefinitely. In future weeks we will implement a light or sound signal to indicate that the robot has completed maze exploration.
 
-We were not able to finish troubleshooting this code in lab, so we have no footage to show the potential of our logic. Our robot does navigate on thr black tape and executes turns, but there is more work to be done to mature this code. We have identified our code's issues. Our visited nodes seem to not be communicating consistently with variables used to tell the robot to change direction, so we will need to pinpoint where the communication breakdown occurs. more examples ... ? (need to list at least 3 flaws)
+We were not able to finish troubleshooting this code in lab, so we have no footage to show the potential of our logic. Our robot does navigate on the black tape and executes turns, but there is more work to be done to mature this code. We have identified our code's issues. Our visited nodes seem to not be communicating consistently with variables used to tell the robot to change direction, so we will need to pinpoint where the communication breakdown occurs. more examples ... ? (need to list at least 3 flaws)
 
 
 ### Main Loop
