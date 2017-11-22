@@ -1,7 +1,7 @@
 # Milestone 4
 
 ## Reading Data from the Arduino
-	In order for the FPGA to properly display any information onto the screen, we had to declare a series of variables that parsed the information received from the Arduino. Since we chose to use parallel communication between the FPGA and the base station Arduino, each bit of information sent from the Arduino is a physical wire connecting pins on both boards. Here are the variables and pins we used to read the arduino’s data.
+In order for the FPGA to properly display any information onto the screen, we had to declare a series of variables that parsed the information received from the Arduino. Since we chose to use parallel communication between the FPGA and the base station Arduino, each bit of information sent from the Arduino is a physical wire connecting pins on both boards. Here are the variables and pins we used to read the arduino’s data.
 
 ```
 prevmov: 
@@ -115,7 +115,7 @@ Else{
 }
 Mark grid spot as visited
 }
-
+```
 
 ## Done Signal
 
@@ -148,5 +148,3 @@ To add sound, we initialized our play_tone module from lab 3, and integrated the
 
 
 Maze exploration with robot video: https://youtu.be/5IiT6Euqq5U
-
-
