@@ -149,6 +149,7 @@ This signal does not account for unreachable nodes, so we will be updating the v
 
 When the robot is done traversing the maze and all of visitable nodes have been visited, a three tone signal is played that signals that the robot has finished. To implement this done signal we used similar code to what we used for our three frequency tone in lab 3. The main difference between lab 3 and this milestone is that we pass the variable enable_sound from our main DE0_Nano file to enable our audio rather than using an external signal from the Arduino. In the code, two counters are used - tone_duration_counter and tone_number_counter - to keep track of how long each tone is being played and what value is being output at that time. Depending on the tone that’s being played, the output will increment from 0 to 255 and decrement back to 0 at different frequencies. The clock that determines the time that it takes for the FPGA to do this, CLKDIVIDER, is calculated based on the frequency of the tone that is being played (CLKDIVIDER = 25000000 / (frequency of tone) / 2). Once a clock time is determined for the specific frequency, the program plays the signal for one second by calling the module makeTone. See [Lab 3](.//Lab3/Lab3.md) for more information.
 
+The pseudocode for playing the sound is as follows:
 ```
 Enable sound
 Set frequency of tone to be played
@@ -171,4 +172,4 @@ To add sound, we initialized our play_tone module from lab 3, and integrated the
 >Figure 2. Virtual Maze after completion
 
 
-[_Check out our robot navigate the maze!_] (https://youtu.be/5IiT6Euqq5U)
+[_Check out our robot navigate the maze!_](https://youtu.be/5IiT6Euqq5U)
