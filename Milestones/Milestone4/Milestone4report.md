@@ -4,7 +4,8 @@
 In order for the FPGA to properly display any information onto the screen, we had to declare a series of variables that parsed the information received from the Arduino. Since we chose to use parallel communication between the FPGA and the base station Arduino, each bit of information sent from the Arduino is a physical wire connecting pins on both boards. Here are the variables and pins we used to read the arduino’s data.
 
 ```
-prevmov: This one-bit signal tells the FPGA if the robot has previously moved a square.
+prevmov: This one-bit signal tells the FPGA if the robot has 
+previously moved a square.
 
 currmov: This one-bit signal tells the FPGA if the robot has moved a square. 
 It takes input from GPIO_1 pin 28.
