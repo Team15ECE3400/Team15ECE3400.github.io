@@ -4,19 +4,30 @@
 In order for the FPGA to properly display any information onto the screen, we had to declare a series of variables that parsed the information received from the Arduino. Since we chose to use parallel communication between the FPGA and the base station Arduino, each bit of information sent from the Arduino is a physical wire connecting pins on both boards. Here are the variables and pins we used to read the arduino’s data.
 
 ```
-prevmov: 
+prevmov: This one-bit signal tells the FPGA if the robot has previously moved a square.
 
-currmov: This one-bit signal tells the FPGA if the robot has moved a square. It takes input from GPIO_1 pin 28.
+currmov: This one-bit signal tells the FPGA if the robot has moved a square. 
+It takes input from GPIO_1 pin 28.
 
-Fwall: This one-bit signal is high when there is a wall detected in the front of the robot, and low when there is not. It takes input from GPIO_1 pin 1.
+Fwall: This one-bit signal is high when there is a wall 
+detected in the front of the robot, and low when there is not. 
+It takes input from GPIO_1 pin 1.
 
-Lwall: This one-bit signal is high when there is a wall detected to the left of the robot, and low when there is not. It takes input from GPIO_1 pin 3.
+Lwall: This one-bit signal is high when there is a wall 
+detected to the left of the robot, and low when there is not. 
+It takes input from GPIO_1 pin 3.
 
-Rwall: This one-bit signal is high when there is a wall detected to the right of the robot, and low when there is not. It takes input from GPIO_1 pin 5.
+Rwall: This one-bit signal is high when there is a wall 
+detected to the right of the robot, and low when there is not. 
+It takes input from GPIO_1 pin 5.
 
-treasure: This two-bit signal defines what kind of treasure the robot has discovered. It concatenates the variables treasure1 and treasure2 which take input from GPIO_1 pins 2 and 4, respectively.
+treasure: This two-bit signal defines what kind of 
+treasure the robot has discovered. 
+It concatenates the variables treasure1 and treasure2 
+which take input from GPIO_1 pins 2 and 4, respectively.
 
-Additionally, GPIO_1 pins 30 and 32 were used to signal x/y direction and +/- movement, respectively, but were not given variable names.
+Additionally, GPIO_1 pins 30 and 32 were used to signal 
+x/y direction and +/- movement, respectively, but were not given variable names.
 ```
 ## Maze Navigation
 
@@ -53,24 +64,32 @@ For the visual portion of the graphics display. We initialize several 4x5 arrays
 
 First thing we must do for display is to determine where the pixel we are looking at is on our map. We determine the value of positionCase, a one bit which is 1 if the pixel is within our maze grid and 0 if it is outside. As the VGA display sweeps through each pixel, we also store the x and y coordinates of the block it is in into the variables gridX and gridY. This is determined through a series of if-elseif statements based on the bounds of each grid. 
 
-LINK FOR VIDEO: https://youtu.be/cVw9e5u2-Zs
+[_In this video,_](https://youtu.be/cVw9e5u2-Zs) we pass in various treasure input signals to the FPGA. Each time we move, we cycle through the different frequencies of treasure, and display them as different colors on the screen.
+
 
 ### Treasure Display
 
 For treasure display, we set up the following registers/variables:
-> treasure: 2 bit value where 0 means no treasure detected, 1 means 7 kHz detected, 2 means 12 kHz detected and 3 for 17 kHz
+> treasure: 2 bit value where 0 means no treasure detected, 1 means 7 kHz detected, 2 means 12 kHz detected and 3 for 17 kHz.
+
 > treasures: 4x5 array to represent the grid. Each grid space contains a 2 bit value corresponding to the type of treasure found. 
-> treasure1: least significant bit of treasure; input read from GPIO pin
-> treasure2: most significant bit of treasure; input read from GPIO pin
+
+> treasure1: least significant bit of treasure; input read from GPIO pin.
+
+> treasure2: most significant bit of treasure; input read from GPIO pin.
 
 To set treasure, we read from two GPIO pins and store the values in the treasure registers and update this value at the rising edge of the clock. 
 
 To change the grid color based on the treasure as the robot is moving we go through the following steps:
-> Check if the VGA driver is evaluating a pixel in the grid
+> Check if the VGA driver is evaluating a pixel in the grid.
+
 > If not at a wall location, check the value of current treasure at the pixel location. 
-> Based on the treasure value, change the corresponding grid square to a different color (no treasure = red, 7 kHz = magenta, 12 kHz = yellow, 17 kHz = orange) by updating PIXEL_COLOR
-> Update the treasure array at grid location with the type of treasure
-> Mark the square as visited
+
+> Based on the treasure value, change the corresponding grid square to a different color (no treasure = red, 7 kHz = magenta, 12 kHz = yellow, 17 kHz = orange) by updating PIXEL_COLOR.
+
+> Update the treasure array at grid location with the type of treasure.
+
+> Mark the square as visited.
 
 Visually, this means that when the robot moves to the next square, the movement will be signified by the corresponding treasure value. To hold that color in that location after it has been visited, we continuously check our treasure array as VGA loops through all the pixels on the screen. If a treasure is detected in the corresponding grid, we hold the same color as above. If there is no treasure, however, the grid changes color to cyan to mark that it is visited but no treasure exists. To implement this, we followed the same logic as above, but checked if the square had been visited or not. 
 
@@ -78,7 +97,7 @@ Visually, this means that when the robot moves to the next square, the movement 
 ### Wall Display
 An additional variable called wallPos is used to signify which wall (or corner) the current pixel is looking at. wallPos is 0 to 4 for the four cardinal direction walls (starting at N and moving clockwise), 5 if there is no wall, and 6-8 for each corner (once again starting at NE and moving clockwise). To eliminate priority issues that arose from only having cases for the four walls, we had an additional four for each corner.
 
-To determine which (if any) walls are present. We use a case statement based on the direction the robot is facing (N, E, S, or W). Within each case statement we then check the value from the wall sensors (FWall, LWall, and RWall) and determine the which direction each corresponds to. For example, the left wall while facing North correspond to the West wall. Additionally, there the sensor value is OR’d with the current value in the wall arrays to preserve memory of defaults of previously seen walls.
+To determine which (if any) walls are present. We use a case statement based on the direction the robot is facing (N, E, S, or W). Within each case statement we then check the value from the wall sensors (FWall, LWall, and RWall) and determine the which direction each corresponds to. For example, the left wall while facing North correspond to the West wall. Then, the sensor value is OR’d with the current value in the wall arrays to preserve memory of previously seen walls.
 
 ###  Updating Display 
 The updating of each color is done in a case statement: one case for outside the grid and one case for pixels within the grid. For the outside grid case it simply checks for the done signal and changes the pixel color to black if we are not done mapping. If the current pixel is within the grid, then we check the following things and execute as follows:
@@ -151,5 +170,5 @@ To add sound, we initialized our play_tone module from lab 3, and integrated the
 ![_](./Milestone4Photos/IMG_5850.JPG)
 >Figure 2. Virtual Maze after completion
 
-https://youtu.be/5IiT6Euqq5U
->Figure 3. Maze exploration with robot video
+
+>[_Figure 3. Maze exploration with robot video_] (https://youtu.be/5IiT6Euqq5U)
