@@ -171,4 +171,4 @@ To add sound, we initialized our play_tone module from lab 3, and integrated the
 >Figure 2. Virtual Maze after completion
 
 
->[_Figure 3. Maze exploration with robot video_] (https://youtu.be/5IiT6Euqq5U)
+[_Check out our robot navigate the maze!_] (https://youtu.be/5IiT6Euqq5U)
