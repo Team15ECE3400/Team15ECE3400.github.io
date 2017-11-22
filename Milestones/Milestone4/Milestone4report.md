@@ -32,7 +32,7 @@ x/y direction and +/- movement, respectively, but were not given variable names.
 ```
 ## Maze Navigation
 
-Displaying the movement of the robot on the VGA was relatively simple. The robot is given an initial position using the variables x and y. Each time an instruction from the Arduino is passed to the FPGA, we check GPIO_1 pins 30 and 32 and enter nested if-else branches to determine the movement. Additionally, we can determine the robot’s direction with respect to the grid based on which direction it moves i.e. if the robot moves in the +y direction, it is facing N. Here’s the higher-level logic:
+Displaying the movement of the robot on the VGA was relatively simple. The robot is given an initial position using the variables x and y. Each time an instruction from the Arduino on the robot is transmitted by radio to the Arduino attached to the FPGA, an instruction is passed to the FPGA, we check GPIO_1 pins 30 and 32 and enter nested if-else branches to determine the movement. Additionally, we can determine the robot’s direction with respect to the grid based on which direction it moves i.e. if the robot moves in the +y direction, it is facing N. Here’s the higher-level logic:
 
 ```
 if(GPIO_1 pin 30 is low){
@@ -61,7 +61,7 @@ Else {
 
 ## Maze Display
 
-For the visual portion of the graphics display. We initialize several 4x5 arrays to keep track of the treasure and wall data of each grid block; these arrays all have a value of 0 when something is present. We used the following arrays: visited (keeps memory of where robot has been), NWall, EWall, WWall, and SWall that tracks the presence or absence of the four walls of the grid.
+For the visual portion of the graphics display, we initialize several 4x5 arrays to keep track of the treasure and wall data of each grid block; these arrays all have a value of 0 when something is present. We used the following arrays: visited (keeps memory of where robot has been), NWall, EWall, WWall, and SWall that tracks the presence or absence of the four walls of the grid.
 
 First thing we must do for display is to determine where the pixel we are looking at is on our map. We determine the value of positionCase, a one bit which is 1 if the pixel is within our maze grid and 0 if it is outside. As the VGA display sweeps through each pixel, we also store the x and y coordinates of the block it is in into the variables gridX and gridY. This is determined through a series of if-elseif statements based on the bounds of each grid. 
 
@@ -94,13 +94,12 @@ Visually, this means that when the robot moves to the next square, the movement 
 [_In this video,_](https://youtu.be/cVw9e5u2-Zs) we pass in various treasure input signals to the FPGA. Each time we move, we cycle through the different frequencies of treasure, and display them as different colors on the screen.
 
 ### Wall Display
-An additional variable called wallPos is used to signify which wall (or corner) the current pixel is looking at. wallPos is 0 to 4 for the four cardinal direction walls (starting at N and moving clockwise), and 5 if there is no wall. To eliminate priority issues that arose from only having cases for the four walls, we included numbers 6 to 8 to represent the corners between adjacent walls (once again starting at NE and moving clockwise).
+An additional variable called wallPos is used to signify which wall (or corner) the current pixel is looking at. wallPos is 0 to 3 for the four cardinal direction walls (starting at N and moving clockwise), and 4 if there is no wall. To eliminate priority issues that arose from only having cases for the four walls, we included numbers 5 to 8 to represent the corners between adjacent walls (once again starting at NE and moving clockwise).
 
-To determine which (if any) walls are present. We use a case statement based on the direction the robot is facing (N, E, S, or W). Within each case statement we then check the value from the wall sensors (FWall, LWall, and RWall) and determine the which direction each corresponds to. For example, the left wall while facing North correspond to the West wall. Then, the sensor value is OR’d with the current value in the wall arrays to preserve memory of previously seen walls.
+To determine which (if any) walls are present, we use a case statement based on the direction the robot is facing (N, E, S, or W). Within each case statement we then check the value from the wall sensors (FWall, LWall, and RWall) and determine the which direction each corresponds to. For example, the left wall while facing North correspond to the West wall. Then, the sensor value is OR’d with the current value in the wall arrays to preserve memory of previously seen walls.
 
 ![_](./Milestone4Photos/wallPos.png)
 >Figure 1. Wall Position
-
 
 ###  Updating Display 
 The updating of each color is done in a case statement: one case for outside the grid and one case for pixels within the grid. For the outside grid case it simply checks for the done signal and changes the pixel color to black if we are not done mapping. If the current pixel is within the grid, then we check the following things and execute as follows:
