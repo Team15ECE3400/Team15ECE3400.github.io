@@ -86,32 +86,32 @@ The updating of each color is done in a case statement: one case for outside the
 ```
 if(robot is in grid current containing current pixel){
 if(in a wall/corner and those walls are marked as present){
-		Color green
+	Color green
 }
 Else{
-		if(treasure detected){
-			if(one of treasure values){ Decide Treasure based on treasure values and assign corresponding color}
-			Else{
-				Mark red
-			}
+	if(treasure detected){
+		if(one of treasure values){ Decide Treasure based on treasure values and assign corresponding color}
+		Else{
+			Mark red
 		}
+	}
 }
 Mark grid spot as visited
 }	
 Else{
 if(in a wall/corner and those walls are marked as present){
-		Color green
+	Color green
 }
 Else{
-		if(treasure detected){
-			if(one of treasure values){ Decide Treasure based on treasure values and assign corresponding color}
-			Else if (visited){
-				Mark cyan
-			}
-			Else{
-				Mark as white
-			}
+	if(treasure detected){
+		if(one of treasure values){ Decide Treasure based on treasure values and assign corresponding color}
+		Else if (visited){
+			Mark cyan
 		}
+		Else{
+			Mark as white
+		}
+	}
 }
 Mark grid spot as visited
 }
