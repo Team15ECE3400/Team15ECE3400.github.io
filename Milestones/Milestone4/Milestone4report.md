@@ -65,9 +65,6 @@ For the visual portion of the graphics display. We initialize several 4x5 arrays
 
 First thing we must do for display is to determine where the pixel we are looking at is on our map. We determine the value of positionCase, a one bit which is 1 if the pixel is within our maze grid and 0 if it is outside. As the VGA display sweeps through each pixel, we also store the x and y coordinates of the block it is in into the variables gridX and gridY. This is determined through a series of if-elseif statements based on the bounds of each grid. 
 
-[_In this video,_](https://youtu.be/cVw9e5u2-Zs) we pass in various treasure input signals to the FPGA. Each time we move, we cycle through the different frequencies of treasure, and display them as different colors on the screen.
-
-
 ### Treasure Display
 
 For treasure display, we set up the following registers/variables:
@@ -94,9 +91,10 @@ To change the grid color based on the treasure as the robot is moving we go thro
 
 Visually, this means that when the robot moves to the next square, the movement will be signified by the corresponding treasure value. To hold that color in that location after it has been visited, we continuously check our treasure array as VGA loops through all the pixels on the screen. If a treasure is detected in the corresponding grid, we hold the same color as above. If there is no treasure, however, the grid changes color to cyan to mark that it is visited but no treasure exists. To implement this, we followed the same logic as above, but checked if the square had been visited or not. 
 
+[_In this video,_](https://youtu.be/cVw9e5u2-Zs) we pass in various treasure input signals to the FPGA. Each time we move, we cycle through the different frequencies of treasure, and display them as different colors on the screen.
 
 ### Wall Display
-An additional variable called wallPos is used to signify which wall (or corner) the current pixel is looking at. wallPos is 0 to 4 for the four cardinal direction walls (starting at N and moving clockwise), 5 if there is no wall, and 6-8 for each corner (once again starting at NE and moving clockwise). To eliminate priority issues that arose from only having cases for the four walls, we had an additional four for each corner.
+An additional variable called wallPos is used to signify which wall (or corner) the current pixel is looking at. wallPos is 0 to 4 for the four cardinal direction walls (starting at N and moving clockwise), and 5 if there is no wall. To eliminate priority issues that arose from only having cases for the four walls, we included numbers 6 to 8 to represent the corners between adjacent walls (once again starting at NE and moving clockwise).
 
 To determine which (if any) walls are present. We use a case statement based on the direction the robot is facing (N, E, S, or W). Within each case statement we then check the value from the wall sensors (FWall, LWall, and RWall) and determine the which direction each corresponds to. For example, the left wall while facing North correspond to the West wall. Then, the sensor value is OR’d with the current value in the wall arrays to preserve memory of previously seen walls.
 
