@@ -98,6 +98,10 @@ An additional variable called wallPos is used to signify which wall (or corner) 
 
 To determine which (if any) walls are present. We use a case statement based on the direction the robot is facing (N, E, S, or W). Within each case statement we then check the value from the wall sensors (FWall, LWall, and RWall) and determine the which direction each corresponds to. For example, the left wall while facing North correspond to the West wall. Then, the sensor value is OR’d with the current value in the wall arrays to preserve memory of previously seen walls.
 
+![_](./Milestone4Photos/wallPos.png)
+>Figure 1. Wall Position
+
+
 ###  Updating Display 
 The updating of each color is done in a case statement: one case for outside the grid and one case for pixels within the grid. For the outside grid case it simply checks for the done signal and changes the pixel color to black if we are not done mapping. If the current pixel is within the grid, then we check the following things and execute as follows:
 	
@@ -135,6 +139,17 @@ Mark grid spot as visited
 }
 ```
 
+
+![_](./Milestone4Photos/IMG_5851.JPG)
+>Figure 2. Actual Maze used for testing
+
+![_](./Milestone4Photos/IMG_5850.JPG)
+>Figure 3. Virtual Maze after completion
+
+
+[_Check out our robot navigate the maze!_](https://youtu.be/5IiT6Euqq5U)
+
+
 ## Done Signal
 
 ### Done Visual Display
@@ -162,13 +177,4 @@ Else{
 }
 ```
 
-To add sound, we initialized our play_tone module from lab 3, and integrated the tone controlling module into our VGA display code. We enable sound by setting our enable_sound to equal allDone (the visual done signal) so that the sound is generated only when the screen turns pink and all nodes are visited. 
-
-![_](./Milestone4Photos/IMG_5851.JPG)
->Figure 1. Actual Maze used for testing
-
-![_](./Milestone4Photos/IMG_5850.JPG)
->Figure 2. Virtual Maze after completion
-
-
-[_Check out our robot navigate the maze!_](https://youtu.be/5IiT6Euqq5U)
+To add sound, we initialized our play_tone module from lab 3, and integrated the tone controlling module into our VGA display code. We enable sound by setting our enable_sound to equal allDone (the visual done signal) so that the sound is generated only when the screen turns pink and all nodes are visited.
