@@ -146,10 +146,10 @@ Else{
 To add sound, we initialized our play_tone module from lab 3, and integrated the tone controlling module into our VGA display code. We enable sound by setting our enable_sound to equal allDone (the visual done signal) so that the sound is generated only when the screen turns pink and all nodes are visited. 
 
 ![_](./Milestone4Photos/IMG_5851.JPG)
->Figure X. Actual Maze used for testing
+>Figure 1. Actual Maze used for testing
 
 ![_](./Milestone4Photos/IMG_5850.JPG)
->Figure X. Virtual Maze after completion
+>Figure 2. Virtual Maze after completion
 
 https://youtu.be/5IiT6Euqq5U
->Figure X. Maze exploration with robot video
+>Figure 3. Maze exploration with robot video
