@@ -7,6 +7,8 @@
 
 ## [Milestones](.//Milestones/)
 
+## [Ethics HW](./EthicsHW/)
+
 ## [About Us](./AboutUs.md)
 
 ## [Team Contract](./TeamContract.md)
