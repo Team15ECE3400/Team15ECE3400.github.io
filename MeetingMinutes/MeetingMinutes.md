@@ -29,3 +29,5 @@
 ## [November 12](./MM11-12.md)
 
 ## [November 20](./MM11-20.md)
+
+## [November 27](./MM11-27.md)
