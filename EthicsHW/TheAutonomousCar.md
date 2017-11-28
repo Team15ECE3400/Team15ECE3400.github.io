@@ -71,7 +71,7 @@ Dan crossed his arms.
 
 “Our method also costs us sales. Look, I don’t disagree with your utilitarian thought process, Aasta, but Kirsten is breathing down our necks, trying to squeeze out every nickel of profit. We’ve got to find a creative solution which benefits all parti--”
 
-~Bzzt! Bzzt!~
+<i>Bzzt! Bzzt!</i>
 
 Aasta palmed her phone, silencing the alarm.
 
@@ -80,7 +80,6 @@ Aasta palmed her phone, silencing the alarm.
 Daniel opened his mouth, considering voicing protest, but, upon noticing the urgency with which Aasta had packed her belongings, he decided against it. 
 
 Daniel forced a smile. “See you.” 
-
 
 Aasta sighed in relief as she reclined in her BEN15’s driver seat… though, the driver’s seat and the passenger’s seat looked identical. Perhaps, someday, the concept of driver’s seats and riding shotgun will go obsolete; yet more vestigial verbiage, to be trimmed from common speak. She crossed her legs and reached for the dog-eared book sitting on the dashboard.
 
@@ -114,33 +113,33 @@ DAN: You called?
 
 AASTA: AH! How did you get in my car?
 
-DAN: I wanted to talk to you about Ethics. There’s actually a lot you should be worrying about.
+DAN: I wanted to talk to you about Ethics! There’s actually a lot you should be worrying about.
 
 AASTA: What are you talking about?
 
-DAN: Well autonomous cars are a real life application of a very complicated ethical dilemma called the trolley problem.
+DAN: Well autonomous cars are a real life application of a very complicated ethical dilemma called "The Trolley Problem."
 
 [Dan snaps his fingers and scene changes to road/parking lot.]
 
 DAN: Let’s go back to basics. Say you’re in a car, with five people on one road and one person on the other.
 
-[Dan gestures to point at groups as camera shows both parties.]
+[Dan gestures to point at groups as camera shows aforementioned parties.]
 
-DAN: The car starts moving, and you can’t stop it 
+DAN: The car starts moving, and you can’t stop it. 
 
 [Dan reaches down and rips out the brakes.] 
 
 DAN: Now, which road do you go down?
 
-AASTA:Are you crazy! Did you just break my car?! 
+AASTA: Are you crazy! D-did you just break my car?! 
 
 DAN: Yeah I did [nodding], which way do you go?
 
-AASTA: That’s not my choice, it’s the car’s. BEN15, recalculate route.
+AASTA: That’s not my choice, it’s the car’s. BEN15, recalculate route!
 
-[pause of silence]
+[Silence]
 
-AASTA:  BEN15, recalculate route. [pause] RE-CAL-CU-LATE! [pause] Funny, it usually loves recalculating. Why isn’t it working? Did the system break?
+AASTA: Uh... BEN15, recalculate route. [pause] RE-CAL-CU-LATE! [pause] Funny, it usually loves recalculating. Why isn’t it working? Did the system break?
 
 DAN: No, this time the choice is yours. But it looks like we’ve run out of time.
 
@@ -152,11 +151,13 @@ AASTA: Another dream? Ugh, it’s like 3 AM, I need to sleep.
 
 DAN: Oh hey! Ready for more ethics? 
 
+AASTA: Wait wh-
+
 [Dan snaps and scene switches again.]
 
 DAN: This time I’ll give you warning before the car starts. But be ready this time, okay?
 
-AASTA: No, not okay. I can’t just intentionally choose to kill someone, that’s murder! That’s not the person I am!
+AASTA: No no no, <i>not</i> okay. I can’t just intentionally choose to kill someone! That’s murder! That’s not the person I am!
 
 BEN15: Choice acknowledged. Recalculating.
 
@@ -164,31 +165,31 @@ AASTA: What?
 
 [Car begins moving and proceeds to run over group of five people.]
 
-AASTA: Oh my gosh! Why did it-- I didn’t even say anything?!
+AASTA: Oh my gosh! Why did it-- I didn’t even say anything!
 
 DAN: Sure, you did. You chose to not be a murderer.
 
-AASTA: The car just ran over 5 people! It clearly didn’t listen.
+AASTA: But the car just ran over 5 people!
 
 DAN: Sure it did, it perfectly used the virtue test.
 
 AASTA: How is killing five people virtuous in any way?
 
-DAN: Oh but you said you didn’t want to willingly kill anyone, so BEN15 just didn’t do anything. But when you think about it isn’t not doing anything, inherently doing something in itself? The moral line between choice and inaction really adds a whole other dimension---
+DAN: You said you didn’t want to willingly kill anyone, right? So BEN15 just didn’t do anything. But when you think about it isn’t not doing anything, inherently doing something in itself? The moral line between choice and inaction really adds a whole other dimension---
 
-AASTA: AAAAAAAAA
+AASTA: AAAAAAAAAH!!
 
 [Aasta wakes up again.]
 
-AASTA: That’s it! Why does this stupid Trolley problem keep popping up in my head?! And I’m exhausted, how am I supposed to get any sleep? You know what I’ll just not sleep again, yeah that’ll work.
+AASTA: That’s it! Why does this stupid Trolley problem keep popping up in my head?! Sheesh... and now I’m exhausted, how am I supposed to get any sleep? You know what I’ll just not sleep again, yeah that’ll work.
 
 [Alarm clock rings.]
 
-AASTA: Oh great, time for work.
+AASTA: [Yawning] Oh great, time for work.
 
 [Aasta gets in car and heads to work. Before she leaves, Dan runs up to the passenger window.]
 
-DAN: Oh hey Aasta! I think my car’s battery died, can I catch a ride with you to work?
+DAN: Oh hey Aasta! My car battery died, can I catch a ride with you to work?
 
 AASTA: Uh, sure….. (whispering) as long as I don’t get another Ethics lecture
 
@@ -198,17 +199,19 @@ DAN: What was that?
 
 AASTA: Nothing. 
 
-[Aasta starts driving, suddenly the road turns to the parking lot.]
+[Aasta starts driving, suddenly the road morphs into the parking lot.]
 
 AASTA: What the...?
 
-[And then a group of five people appear on road. And on the side road, one person.]
+[A group of five people appear on road. And on the side road, one person.]
 
 AASTA: Oh no, this is just like my dream.
 
 DAN: Oh wow, it’s just like the Trolley problem. Uh.. Aasta, looks like we’re gonna crash into them…
 
-AASTA: Aw I can’t do nothing again. You know what I’m an engineer, and if there’s one thing I know it’s math and 1 is less than 5. BEN15, change lanes.
+AASTA: (aside, pensive) Aw I can’t do nothing again. You know what I’m an engineer, and if there’s one thing I know it’s math. 1 is less than 5!
+
+AASTA: BEN15, change lanes.
 
 BEN15: Acknowledged, recalculating.
 
@@ -222,7 +225,7 @@ AASTA: Huh?
 
 [Alarm clock rings in background and Aasta wakes up again.]
 
-AASTA: Aw c’mon, are you kidding me!
+AASTA: Aw c’mon, are you kidding me?!
 
 
 
@@ -234,39 +237,81 @@ AASTA: Aw c’mon, are you kidding me!
 
 <i>Daniel Edens</i>
 
-Aasta woke up again and pinched herself. “Okay good, I’m actually awake this time, what the heck happened I must’ve went through five nightmares last night, I feel like I didn’t get any sleep.” Aasta gets ready for work, approaches her Tasla and reaches for the car door, slowly creeping it open, cautiously looking for Dan to appear. Dan never did. “Okay I’m actually awake now, what did I expect? I just need to get through this day. It’s Friday, and a weekend of sleep is almost here.” Aasta picks up a Coffee Traveler at Starbucks on the way to work.
+Aasta woke up again and pinched herself. 
 
-Arrives at work, “Oh wow thanks Aasta! Everyone look Aasta bought us all coffee!” said Erika, one of Aasta’s engineering coworkers. ‘It’s actually all mine, there’s a Keurig in the break room for a reason.’ Aasta replied sharply. ‘Oh, sorry, I… okay I’ll use the Keurig.’
+“Okay... good, I’m actually awake this time. What the heck happened? I must’ve experienced five nightmares last night... I feel like I didn’t get any sleep at all.” 
 
-The hours flew by as Aasta coded. At around 2 hours left of work, ‘I feel like I squashed this bug of code before’, Aasta thought to herself. About an hour later, Dan from the ethics department appears next to her cubicle.
+Aasta got ready for work, approaching her Tasla and reaching for the car door, slowly creeping it open, cautiously looking for Dan to appear. 
 
-DAN: “Hey! I haven’t talked to you in awhile, I just wanted to discuss something. I think you need to see this.”
+No Dan. What a relief.
 
-AASTA: “Hey, Dan. What is it?”
+“Okay," Aasta reasoned. "I’m actually awake now, what did I expect? I just need to get through this day. It’s Friday, and a weekend of sleep is almost here.” 
 
-DAN: “Statistics. I think these would be relevant to you. Look here.”
+Aasta picked up a Coffee Traveler at Starbucks on the way to work. Arriving at the office, she hears a voice to her right.
 
-AASTA: “Oh yeah, you’re showing me the dip in sales of the BEN15s after the November 27th upload of our software. Some hacker nosed his way into my code and exposed our ethical decision making. Don’t people have better things to do?”
+“Oh wow, thanks, Aasta! Everyone, look! Aasta bought us all coffee!” said Erika, one of Aasta’s engineering coworkers. 
 
-DAN: “Wow, yes you read my mind exactly, I was…
+"It’s actually all mine, there’s a Keurig in the break room for a reason," Aasta replied sharply.
 
-AASTA: “I already know what you’re going to say, and you know what, FINE, I’ll change it, I’ll CONFORM to society, cause that’s what everyone seems to care about these days. We want more money, let's push logic aside and please the BEN15 owners and investors. Let’s hit pedestrians who have zero chance of survival instead of using the fully capable safety features of the BEN15 which give Tasla drivers a high chance of survival. I know Tasla’s quarterly report is due today, and that’s the main reason you’re here. I’ll change the code and upload it today.”
+"Oh, sorry, I… okay I’ll use the Keurig."
 
-“Thanks a lot!” Dan replied, with a smile. “I’ll ask the VP to give you a raise. I hope you have a great weekend!”
+Erika slunk away from the room, dejected. Aasta triumphantly took a sip of her coffee, a smug grin on her face. That was one obstacle out of the way.
 
-“Yeah, you too.” Aasta replied in a monotone voice.
+The hours flew by as Aasta coded. At around 2 hours left of work, she began to experience peculiar recollections.
 
-Aasta spent the last hour of work changing the code that prioritized pedestrians over the driver. She made it so that this time it weighed the value of each person to society. ‘This algorithm of saving people based on their expected contribution to society covers the ethical tests of utilitarian, virtue, and justice. In an ethical situation, the software will kill the least amount of potential worth to society, which is the best outcome for everyone. I don’t believe that choosing one person over the other solely based on expected financial contribution to society is right, so I incorporated selflessness and community service of each person into my algorithm to satisfy my virtues. It definitely matches the virtues of my company, to minimize damage to society while advertising the BEN15 as a vehicle that keeps the driver safe. Lastly, justice is served when the choice is between criminals and innocent people. I still think the previous method of sacrificing the car’s safety over any pedestrian was better, but this algorithm has a utilitarian, virtue, and justice mixture of my ethics, my company’s ethics, and society’s ethics.
+'I feel like I squashed this bug in the code before,' Aasta thought to herself. 
 
-Aasta made the finishing touches to her code, modeled it in the virtual reality simulator with a few ethical situations between animals and humans, criminals and innocent people, and a mixture of the above. Satisfied with the results, Aasta pushed the code to GitHub and released a firmware update to all BEN15 vehicles.
+About an hour later, Dan from the ethics department appeared next to her cubicle.
 
-Aasta entered her BEN15 after work and waited for the firmware update to install. “Go home,” she ordered. BEN15 replied “Acknowledged. Going home.” On the way home Aasta couldn’t help but notice the news that a BEN15 vehicle had killed a duck instead of running over a wallet full of cash. ‘Oops, I’ll have to fix that bug on Monday. I need to relax.’ Turns off phone.
+“Hey!" Dan exclaimed. "I haven’t talked to you in awhile, I just wanted to discuss something. I think you need to see this.”
 
-Aasta suddenly recalled the train incident about 29 minutes into her ride home when she noticed she was 100 yards from a train track. “STOP” she yelled. “Pulling over.” BEN15 replied. Another BEN15 that was behind Aasta changed lanes quickly to avoid hitting Aasta and proceeded towards the tracks. “Oh no..” Aasta said outloud. “They’re going to… oh NO.” Aasta reaches to honk the horn and remembered BEN15s don’t have horns. “What do I do?”
+“Hey, Dan. What is it?” Aasta forced a grin. She was so close to the weekend, she could stomach just a bit more human interaction.
 
-A few hours later, Tasla made a news release on what had occurred with the BEN15 that got slammed by a train. Aasta read the news article nervously. It turns out the bums on the side of the road were actually scientists conducting an experiment on the air drag of trains. The driver was a good citizen, but the scientists happened to have higher scores on the ‘contribution to society’ scale.
+“Statistics," Dan noted. "I think these would be relevant to you. Look here.”
 
-The next morning, there were multiple news reports of other ethical incidents that occurred across the county. There was a situation where a BEN15 hit a deer instead of a human baby. ‘That’s good news at least.’ Aasta thought. Another where a politician was hit instead of a Turkey. Turns out the politician had betrayed his own country and was making illegal deals. “Wow, I didn’t think BEN15 could detect that.”
+“Oh yeah, you’re showing me the dip in sales of the BEN15s after the November 27th upload of our software. Some hacker nosed his way into my code and exposed our ethical decision making. Don’t people have better things to do?”
+
+“Uh... Wow, yes you read my mind exactly, I was ..."
+
+“I already know what you’re going to say, and, hey, you know what? I'll CHANGE my algorithm to CONFORM to society, 'cause that’s what everyone seems to care about these days. We want more money, right? Let's push logic aside and pander to the BEN15 owners and investors. Let’s hit pedestrians who have zero chance of survival instead of using the fully capable safety features of the BEN15 which give Tasla drivers a high chance of survival. I know Tasla’s quarterly report is due today, and that’s the main reason you’re here. I’ll change the code and upload it today.”
+
+“Thanks a lot!” Dan replied, with a glowing smile. “I'm sure Kirstin will give you a raise! Have a great weekend!”
+
+“Yeah, yeah, you too.” Aasta replied in a monotone voice.
+
+Aasta spent the last hour of work changing the code that prioritized pedestrians over the driver. She made it so that this time, the algorithm weighed the value of each person to society. 
+
+‘This algorithm of saving people based on their expected contribution to society covers the ethical tests of utilitarian, virtue, and justice,' thought Aasta. 'In an ethical situation, the software will kill the least amount of potential worth to society, which is the best outcome for everyone. I don’t believe that choosing one person over the other solely based on expected financial contribution to society is right, so I incorporated selflessness and community service of each person into my algorithm to satisfy my virtues. It definitely matches the virtues of my company, to minimize damage to society while advertising the BEN15 as a vehicle that keeps the driver safe. Lastly, justice is served when the choice is between criminals and innocent people. I still think the previous method of sacrificing the car’s safety over any pedestrian was better, but this algorithm has a utilitarian, virtue, and justice mixture of my ethics, my company’s ethics, and society’s ethics.'
+
+Aasta made the finishing touches to her code, then modeled it in the virtual reality simulator with a few ethical situations between animals and humans, criminals and innocent people, and mixtures of the above. Satisfied with the results, Aasta pushed the code to GitHub and released a firmware update to all BEN15 vehicles.
+
+Aasta entered her BEN15 after work and waited for the firmware update to install. “Go home,” she ordered. BEN15 replied “Acknowledged. Going home.” On the way home Aasta couldn’t help but notice the news: a BEN15 vehicle had killed a duck instead of running over a wallet full of cash. 
+
+‘Oops, I’ll have to fix that bug on Monday,' Aasta thought, turning off her phone. 'Enough news. I need to relax.’
+
+Aasta suddenly recalled the train incident about 29 minutes into her ride home. She was 100 yards from a train track; the situation was exactly as she remembered it. 
+
+“STOP” she yelled. 
+
+“Pulling over.” BEN15 replied. 
+
+Another BEN15 that was behind Aasta changed lanes quickly to avoid hitting Aasta and proceeded towards the tracks.
+
+“Oh no..” Aasta said aloud. “They’re going to… oh NO!” 
+
+Aasta reached to honk the horn, but suddenly remembered that BEN15s don’t have horns. 
+
+“What do I do?”
+
+A few hours later, Tasla made a news release on what had occurred with the BEN15 that got slammed by the train. Aasta read the news article nervously. It turns out the bums on the side of the road were actually scientists conducting an experiment on the air drag of trains. The driver was a good citizen, but the scientists happened to have higher scores on the ‘contribution to society’ scale.
+
+The next morning, there were multiple news reports of other ethical incidents that occurred across the county. In particular, there was a situation where a BEN15 hit a deer instead of a human baby. 
+
+‘That’s good news at least,’ Aasta thought. 
+
+Another article highlighted an incident where a politician named David was hit instead of a Turkey. It later turned out that the politician had betrayed his own country and was making illegal deals with the mafia. 
+
+“Wow, I didn’t think BEN15 could detect that," Aasta said to herself, incredulous.
 
 Dan sent an email to Aasta thanking her for her hard work and mentioned that her raise would be in place by Wednesday.
 
@@ -378,9 +423,9 @@ In her first dream, Aasta’s original code is implemented and BEN15 is instruct
 
 In the second scenario, Aasta decides that she does not want to be responsible for making a decision, so she allows BEN15 to continue in its original direction. While she does not want the responsibility of making a decision, in the end she realizes that allowing the car to continue its path is equivalent to choosing those victims’ fate. She decides that this “inaction” is not representative of her character or virtues, so she puts matters into her hands and applies the utilitarian test, choosing to save five people over one. 
 
-In the third scenario, Aasta relents to Dan with his financial reports and implements code that society believes is fair. She has BEN15 use the justice test to take into account the quality and characteristics of the victims. In this case, animals and criminals have low priority, while scientists and those with greater economic contribution (such as a wallet) are prioritized. While BEN15’s decision-making faces a couple of bugs and flaws, such as running over a turkey instead of a wallet, the majority of society approves of this choice, since it is viewed as most “fair.” Its evaluation of who deserves to live is based on economic, social, and political contribution and background. As a result, Tasla sees an increase in sales.
+In the third scenario, Aasta relents to Dan with his financial reports and implements code that society believes is fair. She has BEN15 use the justice test to take into account the quality and characteristics of the victims. In this case, animals and criminals have low priority, while scientists and those with greater economic contribution (such as a wallet) are prioritized. While BEN15’s decision-making faces a couple of bugs and flaws, such as running over a duck instead of a wallet, the majority of society approves of this choice, since it is viewed as most “fair.” Its evaluation of who deserves to live is based on economic, social, and political contribution and background. As a result, Tasla sees an increase in sales.
 
-In the fourth scenario, Aasta experiences a scary situation in which she is unable to execute a decision based on her own virtues. BEN15 ignores any commands until it finally executes Shanee’s command, to which Aasta is very against and has no time left to reverse. After waking up from this nightmare, Aasta uses the virtue test and considers whether the executed action represents the kind of person she wants to be. 
+In the fourth scenario, Aasta experiences a scary situation in which she is unable to execute a decision based on her own virtues. BEN15 ignores any commands until it finally executes Shanee’s command, to which Aasta is very against and has no time left to reverse. During this nightmare, Aasta uses the virtue test and considers whether the executed action represents the kind of person she wants to be. 
 
-In the near future, real-life autonomous cars may not be uncommon, and scenarios like these will be experienced everyday. Companies such as Uber and Google will need to make executive decisions on how their cars behave in potentially fatal accidents. Those decisions could be made based off of sales and public approval, as seen by Dan’s job, or they could involve prioritizing lives of certain people. Each decision can reveal a lot about what is widely regarded as “ethical.” Whether we value statistically beneficial outcomes, economic contribution, or individual decision, there is no right or wrong decision. Ethics can be a subjective matter and with the choices we make, we must be willing to accept the expected consequences.
+In the near future, real-life autonomous cars may not be uncommon, and scenarios like these will be experienced everyday. Companies such as Uber and Google will need to make executive decisions on how their cars behave in potentially fatal accidents. Those decisions could be made based on of sales and public approval, as seen by Dan’s job, or they could involve prioritizing lives of certain people. Each decision can reveal a lot about what is widely regarded as “ethical.” Whether we value statistically beneficial outcomes, economic contribution, or individual decision, there is no right or wrong decision. Ethics can be a subjective matter and with the choices we make, we must be willing to accept the expected consequences.
 	
