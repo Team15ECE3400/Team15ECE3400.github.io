@@ -69,7 +69,7 @@ Dan crossed his arms.
 
 “So they’d rather choose whether or not to drive off the bridge, and live with the guilt when they couldn’t choose in time? Our method saves lives.”
 
-“Our method also costs us sales. Look, I don’t disagree with your utilitarian thought process, Aasta, but Kirsten is breathing down our necks, trying to squeeze out every nickel of profit. We’ve got to find a creative solution which benefits all parti--”
+“Our method also costs us sales. Look, I don’t disagree with your utilitarian thought process, Aasta, but Kirstin is breathing down our necks, trying to squeeze out every nickel of profit. We’ve got to find a creative solution which benefits all parti--”
 
 <i>Bzzt! Bzzt!</i>
 
