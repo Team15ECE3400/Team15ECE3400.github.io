@@ -1,3 +1,11 @@
+# About Us
+What does TBD truly mean?
+Does it mean "The Best Design?"
+Or possibly, "Team Blue Dragons?"
+Maybe even "Totally Broken Depth (First Search)?"
+
+We'll be sure to let you all know when we find out.
+
 ### Aasta Gandhi
 
 ![](./TeamPhotos/Aasta.jpg)
