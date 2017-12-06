@@ -205,9 +205,13 @@ We were given a budget of $100 to spend on our robot. The following are all the 
 ### Lab provided parts
 
 4 Line (grayscale) sensors: $3 each = $12
+
 3 IR distance sensors: $7 each = $21
+
 1 Electret Microphone Amplifier: $7 each = $7
+
 2 Parallax servos: $13 = $26
+
 1 LM358 OPAMP $0.48 = $0.48
 
 ### Purchased parts
