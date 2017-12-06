@@ -6,6 +6,8 @@ Maybe even "Totally Broken Depth (First Search)?"
 
 We'll be sure to let you all know when we find out.
 
+## The Comrades
+
 ### Aasta Gandhi
 
 ![](./TeamPhotos/Aasta.jpg)
