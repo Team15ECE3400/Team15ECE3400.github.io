@@ -255,4 +255,4 @@ Though our robot remained finicky until the very end, designing and assembling i
 
 ![](./team15TBD.jpg)
 
-Team Photo
+Final Competition
