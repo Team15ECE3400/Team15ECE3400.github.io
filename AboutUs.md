@@ -23,4 +23,4 @@
 ![](./TeamPhotos/Shanee.jpg)
 
 ### Team Photo
-![](./FinalStretch/TeamPhoto.JPG.jpg)
+![](./FinalStretch/TeamPhoto.JPG)
