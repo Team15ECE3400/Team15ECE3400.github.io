@@ -1,6 +1,6 @@
 # Final Documentation
 
-
+To build an autonomous physical system that successfully navigates a maze, detects treasure, and displays real-time information, our team completed many intermediate steps to ensure a robust and smoothly integrated final product. Our team completed 4 labs and 4 milestones that each focused on a specific task the robot was required to operate, ranging from line following to radio communication. While these individual tasks helped us integrate the robot, we also gained experience from the effects of many different components interacting with each other, facing hardware issues, bugs, noise, and interference. This final report documents our team's progress throughout the labs, milestones, and intermediate steps and how they contributed to the final robot implementation. 
 
 # The Labs
 
