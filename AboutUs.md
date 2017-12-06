@@ -4,7 +4,7 @@ Does it mean "The Best Design?"
 Or possibly, "Team Blue Dragons?"
 Maybe even "Totally Broken Depth (First Search)?"
 
-We'll be sure to let you all know when we find out.
+If you find out, please let us know!
 
 ## The Comrades
 
