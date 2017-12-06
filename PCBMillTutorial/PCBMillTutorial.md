@@ -21,7 +21,7 @@ Figure 1: Arduino Uno Milled Shield Top
 Figure 2: Arduino Uno Milled Shield Bottom
 
 PCB Mill Tutorial
-This tutorial is based on the ![QCJ5 manual](https://ece.uncc.edu/sites/ece.uncc.edu/files/media/isoproj5.pdf) and goes more into detail on all the steps with pictures and extra steps not covered in the manual. Please read and understand this tutorial before training to maximize your learning experience. Also skim the online manual from page 8 to 32.
+This tutorial is based on the [QCJ5 manual](https://ece.uncc.edu/sites/ece.uncc.edu/files/media/isoproj5.pdf) and goes more into detail on all the steps with pictures and extra steps not covered in the manual. Please read and understand this tutorial before training to maximize your learning experience. Also skim the online manual from page 8 to 32.
 
 1) Importing Gerber Files
 The only gerber files you need are the top layer .GTL, bottom layer .GBL, and drill which may be a .DRL or .TXT file. You will have to try .DRL and .TXT to see which works.
