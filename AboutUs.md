@@ -21,3 +21,6 @@
 ### Shanee Lu
 
 ![](./TeamPhotos/Shanee.jpg)
+
+### Team Photo
+![](./FinalStretch/TeamPhoto.JPG.jpg)
