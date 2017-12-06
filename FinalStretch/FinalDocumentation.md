@@ -65,6 +65,7 @@ Based on the given radio code, we had little issues with transmitting and receiv
 Because our radio packet could only send 8 bits at a time, we used as few bits as possible to represent x/y movement (x for East/West, y for North/South), +/- movement (+ for North and East, - for South and West), treasure detection, wall detection, and whether the robot moved at all.
 
 ![](./datainfo.png)
+
 Note1: Wall bits are relative to robot position and not to cardinal directions.
 
 Note2: Treasure bits: B00=no treasure, B01=7kHz, B10=12kH, B11=17kHz.
@@ -138,9 +139,16 @@ For radio communication, one of our challenges was indicating when the robot com
 
 # Final Robot Design Specs
 
+![](./3400.jpg)
+
 Figure x: Robot Block Diagram
 
+![](./ProtoBoardTop.jpg)
+
 Figure y: Protoboard Top
+
+![](./ProtoBoardBottom.jpg)
+
 Figure z: Protoboard Bottom
 
 ## Sensors
@@ -162,7 +170,7 @@ Previously, our maze traversal only considered itself done once all grids were v
 An 5x4 array, called explored, stores information about whether a node on the grid has been completely explored. We define completely explored as whether for each side (North, East, South, West) we have 1) detected a wall on that side or 2) visited the neighbor on that side. A node is initially assigned a value of 4 in explored to indicate that we have no information about the four nodes surrounding it. This value is decremented by 1 when either of the two scenarios mentioned above occurs, until explored equals zero. We count each exploration only once to prevent the value in explored from decrementing say if the robot paces back and forth between two nodes.
 
 
-Figure n: Grids
+Figure x: Grids
 
 Our traversal algorithm is changed slightly to prioritize nodes that are less explored, i.e. if the current node is surrounded by a completely unexplored node (explored[i-1][j] = 4), it will prioritize that node instead of another one that is partly explored (explored[i+1][j] = 3). Since values for explored is only changed for nodes that have been visited or are being visited, unreachable nodes will always have an explored value of 4. Our condition for having traversed all reachable nodes is then determined by if explored holds a zero or four for all grids of the maze.
 
