@@ -228,8 +228,6 @@ We were given a budget of $100 to spend on our robot. The following are all the 
 ### Purchased parts
 [1 Adafruit Pro Trinket - 5V 16MHz: $9.95](https://www.adafruit.com/product/2000) + $2 shipping = $11.95 
 
-(Dan bought this in a bigger order. Can’t find receipt, but a link to the part is provided)
-
 All of the other parts used on our robot, such as 3-D printed plastic components and breadboards, did not contribute towards the cost. The total cost of our robot is $78.43.
 
 # Conclusions
