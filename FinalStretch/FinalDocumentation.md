@@ -107,6 +107,14 @@ The wall detection code developed during this Milestone would eventually be used
 
 We had designed a custom “harness” to hold our wall sensors. At the time, we were planning on placing the wall sensors slightly ahead of the robot, in order to give our robot a sort of early warning upon reaching an intersection. However, towards the end of the semester, we removed the harness, instead deciding to place the wall sensors in top of the chassis. This was because the harness reduced the maneuverability of the robot, knocked down walls, and occasionally gave faulty data.
 
+![](./sensorsmountpic.png)
+
+Figure x: Original sensor "harness"
+
+![](./sensorplace.png)
+
+Figure x: Location of wall sensors when attached to the harness
+
 The treasure code was also effectively unchanged until the final day before the competition. We discovered that our treasure detection sensors were extremely sensitive, so we implemented a cutoff amplitude for treasure detection in order for our robot to only detect a treasure when in close proximity (eg: same grid as the treasure). Otherwise, our robot would be able to detect a treasure from across the maze, which would give incorrect an incorrect readout on the mapping.
 
 ## Milestone 3
