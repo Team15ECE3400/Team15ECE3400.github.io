@@ -2,8 +2,6 @@
 
 
 
-Our robot will henceforth be referred to by its official name, “our robot.”
-
 # The Labs
 
 The labs were more designed to provide component-level design ideas. The concepts explored in each lab directly correlated to specific objectives in the final competition, from using sensors and the Arduino FFT library to detect specific signal frequencies, to using the VGA to draw shapes and lines of varying color on the monitor.
