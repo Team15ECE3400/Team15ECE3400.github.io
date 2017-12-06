@@ -143,6 +143,14 @@ For radio communication, one of our challenges was indicating when the robot com
 
 Figure x: Robot Block Diagram
 
+![](./RobotFront.jpg)
+
+Figure x: Robot Front
+
+![](./RobotRight.jpg)
+
+Figure x: Robot Right Side
+
 ![](./ProtoBoardTop.jpg)
 
 Figure y: Protoboard Top
@@ -169,6 +177,7 @@ Previously, our maze traversal only considered itself done once all grids were v
 
 An 5x4 array, called explored, stores information about whether a node on the grid has been completely explored. We define completely explored as whether for each side (North, East, South, West) we have 1) detected a wall on that side or 2) visited the neighbor on that side. A node is initially assigned a value of 4 in explored to indicate that we have no information about the four nodes surrounding it. This value is decremented by 1 when either of the two scenarios mentioned above occurs, until explored equals zero. We count each exploration only once to prevent the value in explored from decrementing say if the robot paces back and forth between two nodes.
 
+![](./grids.jpg)
 
 Figure x: Grids
 
@@ -198,6 +207,10 @@ To communicate between the Trinket and the Arduino Uno, we used logic gpio pins.
 
 The treasure detection code uses Trinket pin 3 for 7kHz, 4 for 12kHz, and 5 for 17kHz treasures. When any of these treasures are detected by the Trinket code, one of these pins is set to logic high for 500ms. The 500ms is to provide time for the Uno maze exploration algorithm to detect a logic high on one of these pins and not too much time so the treasure is not detected in the wrong box.
 The treasure detection code was tuned to detect treasures within 25cm and no farther. This tuning was done by adjusting the threshold for max_amp, the maximum amplitude of all the bins in the FFT. Here is a link to the [Trinket Code](./TrinketCode.md).
+
+![](./TreasureTuning.jpg)
+
+Figure x: Treasure Tuning
 
 ## Cost Components
 We were given a budget of $100 to spend on our robot. The following are all the parts used on our robot that contribute towards the total cost:
