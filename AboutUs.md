@@ -1,4 +1,4 @@
-# About Us
+# About Team TBD
 What does TBD truly mean?
 Does it mean "The Best Design?"
 Or possibly, "Team Blue Dragons?"
