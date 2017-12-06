@@ -1,14 +1,17 @@
-PCB Mill Tutorial (In progress..)
-by Daniel Edens, Oct. 27th, 2017
+# PCB Mill Tutorial
 
-Introduction
+by Daniel Edens, Fall 2017
+
+## Introduction
 The QCJ5 Quick Circuit Mill delivers the precision, speed, and automation required to take your prototype to the next level. Making a board on the mill enhances your PCB designing and machine skills. It’s also exciting to watch your board created live. The main difference between a milled board and a PCB is that a PCB is a sheet of dielectric material with copper placed as traces and pads, and a milled board has copper on the entire plane of two faces with a dielectric in between and traces and pads are defined by cuts. On the milled board, cuts are made through the copper and into the dielectric to completely isolate any sections of copper.
 
-Part of the Maker Space?
+## Part of the Maker Space?
+
 If you are already part of the Maker Space, trained on the PCB mill, and want to mill out your own PCB, we can provide you with 1- or 2-layer boards. The cost of these will count against your final budget. Please send Kirstin an email with the approximate size of the board you want, and how many layers of copper you need (1 or 2).
 Please designate one person from your team to learn how to use and work on the PCB mill. This will allow more teams to have at least one trained member. You can contact <did Daniel Edens graduate?> to request training. Include your team number in the email.
 
-Designing a Layout
+## Designing a Layout
+
 Be sure to check out Leah’s lecture slides on layout design and (Leah’s tutorial). Your layout design for the mill will be slightly different than an optimal PCB. For instance, a via on a milled board is created by drilling a hole and inserting and squishing a pin into the hole, so a header or through hole component cannot have traces on the same layer as itself since the component pins and the pin cannot exist in the same hole. This means that the trace must connect to the component pins on the opposite layer of the component as shown in figure 2. Please keep this in mind in your design. You may have to add vias to your board to make this possible. Figure 1 and 2 show this setup.
 
 ![](./Images/UnoMilledPCBTop.JPG)
