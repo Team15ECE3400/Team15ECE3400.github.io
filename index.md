@@ -3,8 +3,6 @@
 
 ## [Final Documentation](./FinalStretch/FinalDocumentation.md)
 
-## [Meeting Minutes](./MeetingMinutes/MeetingMinutes.md)
-
 ## [Labs](.//Lab/)
 
 ## [Milestones](.//Milestones/)
@@ -14,5 +12,7 @@
 ## [Ethics HW](./EthicsHW/)
 
 ## [About Us](./AboutUs.md)
+
+## [Meeting Minutes](./MeetingMinutes/MeetingMinutes.md)
 
 ## [Team Contract](./TeamContract.md)
