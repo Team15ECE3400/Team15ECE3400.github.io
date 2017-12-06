@@ -156,4 +156,4 @@ Check that the air pressure above the PCB Mill is set to 90psi.
 
 To be continued...
 
-I trained a few 3400 classmates this semester.
+I trained a few 3400 classmates on other teams this semester.
