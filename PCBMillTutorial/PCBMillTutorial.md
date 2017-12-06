@@ -148,4 +148,12 @@ This is a properly trimmed board.
 ![](./Images/38.JPG)
 Figure 40
 
-To be continued....Sorry
+Now it is time to run the PCB Mill!
+
+Close the software, turn on the PCB Mill, and then reopen the software.
+
+Check that the air pressure above the PCB Mill is set to 90psi.
+
+To be continued...
+
+I trained a few 3400 classmates this semester.
