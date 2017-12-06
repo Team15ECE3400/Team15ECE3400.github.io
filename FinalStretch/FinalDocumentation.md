@@ -64,7 +64,7 @@ Based on the given radio code, we had little issues with transmitting and receiv
 
 Because our radio packet could only send 8 bits at a time, we used as few bits as possible to represent x/y movement (x for East/West, y for North/South), +/- movement (+ for North and East, - for South and West), treasure detection, wall detection, and whether the robot moved at all.
 
-![](./FinalStretch/datainfo.png)
+![](./datainfo.png)
 Note1: Wall bits are relative to robot position and not to cardinal directions.
 
 Note2: Treasure bits: B00=no treasure, B01=7kHz, B10=12kH, B11=17kHz.
