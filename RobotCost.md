@@ -15,7 +15,7 @@ contribute towards the total cost:
 1 LM358 OPAMP $0.48 = $0.48
 
 ### Purchased parts
-[1 Adafruit Pro Trinket](https://www.adafruit.com/product/2000) - 5V 16MHz: $9.95 + $2 shipping = $11.95 
+[1 Adafruit Pro Trinket - 5V 16MHz](https://www.adafruit.com/product/2000): $9.95 + $2 shipping = $11.95 
 
 (Dan bought this in a bigger order. Can’t find receipt, but a link to the part is below)
 
