@@ -24,6 +24,7 @@ PCB Mill Tutorial
 This tutorial is based on the [QCJ5 manual](https://ece.uncc.edu/sites/ece.uncc.edu/files/media/isoproj5.pdf) and goes more into detail on all the steps with pictures and extra steps not covered in the manual. Please read and understand this tutorial before training to maximize your learning experience. Also skim the online manual from page 8 to 32.
 
 1) Importing Gerber Files
+
 The only gerber files you need are the top layer .GTL, bottom layer .GBL, and drill which may be a .DRL or .TXT file. You will have to try .DRL and .TXT to see which works.
 Place your gerber files in “Desktop/Mill Project Files/<your net id folder>/<project name>” shown in Figure 3. Open the ISOPro Software. If the software doesn’t load, restart the computer and try again. In the software, click “File > Import > Auto-detect File(s)”. Navigate to your gerber files and select the .GTL, .GBL, and .TXT or .DRL files.
 
