@@ -34,4 +34,5 @@ If you find out, please let us know!
 
 ### Team Photo
 ![](./FinalStretch/TeamPhoto.JPG)
+
 Not shown: Ben Francis
