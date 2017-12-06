@@ -1,4 +1,4 @@
-## Cost Components
+## Cost of Components
 We were given a budget of $100 to spend on our robot. The following are all the parts used on our robot that
 contribute towards the total cost:
 
