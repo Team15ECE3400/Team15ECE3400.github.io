@@ -245,6 +245,8 @@ While each individual component may have worked as planned, when integrated into
 
 Yet, even with consummate understanding, unforeseen factors affected the effectiveness and correctness of our solution. For instance, the VGA display was operating properly before the competition, but all the radio transmission from other robots corrupted a few of our transmissions. Interference and noise from the surrounding area could have also caused our system to drop packets. We did not have code to retransmit upon failure, which resulted in a poor VGA display if just one packet was not transmitted correctly. We tested our robot right after the competition, and it operated correctly, thus confirming that our display code was adversely affected by the location.
 
-Though our robot remained finicky until the very end, designing and assembling it taught us valuable lessons on how to integrate a physical system in a practical and compact manner. 
+Future improvements can be made in ensuring data is transmitted to the FPGA. We would do this by detecting dropped transmissions and retrasnmitting until the packet is successfully sent. We would also improve the line sensor code to take more samples since the senesors sometimes detect a wall that is not present. Now that we have identified these issues, we would be well prepared for a re-competition.
+
+Though our robot remained finicky until the very end, designing and assembling it taught us valuable lessons on how to integrate a physical system in a practical and compact manner.
 
 [Video](https://www.youtube.com/watch?v=oQ7_qvqLbjA) of maze exploration with display on the monitor.
