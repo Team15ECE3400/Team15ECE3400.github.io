@@ -64,6 +64,8 @@ Because our radio packet could only send 8 bits at a time, we used as few bits a
 
 ![](./datainfo.png)
 
+Figure 1
+
 Note1: Wall bits are relative to robot position and not to cardinal directions.
 
 Note2: Treasure bits: B00=no treasure, B01=7kHz, B10=12kH, B11=17kHz.
@@ -109,11 +111,11 @@ We had designed a custom “harness” to hold our wall sensors. At the time, we
 
 ![](./sensorsmountpic.png)
 
-Figure x: Original sensor "harness"
+Figure 2: Original sensor "harness"
 
 ![](./sensorplace.png)
 
-Figure x: Location of wall sensors when attached to the harness
+Figure 3: Location of wall sensors when attached to the harness
 
 The treasure code was also effectively unchanged until the final day before the competition. We discovered that our treasure detection sensors were extremely sensitive, so we implemented a cutoff amplitude for treasure detection in order for our robot to only detect a treasure when in close proximity (eg: same grid as the treasure). Otherwise, our robot would be able to detect a treasure from across the maze, which would give incorrect an incorrect readout on the mapping.
 
@@ -147,23 +149,23 @@ For radio communication, one of our challenges was indicating when the robot com
 
 ![](./3400.jpg)
 
-Figure x: Robot Block Diagram
+Figure 4: Robot Block Diagram
 
 ![](./RobotFront.jpg)
 
-Figure x: Robot Front
+Figure 5: Robot Front
 
 ![](./RobotRight.jpg)
 
-Figure x: Robot Right Side
+Figure 6: Robot Right Side
 
 ![](./ProtoBoardTop.jpg)
 
-Figure y: Protoboard Top
+Figure 7: Protoboard Top
 
 ![](./ProtoBoardBottom.jpg)
 
-Figure z: Protoboard Bottom
+Figure 8: Protoboard Bottom
 
 ## Sensors
 ### Line Following 
@@ -185,7 +187,7 @@ An 5x4 array, called explored, stores information about whether a node on the gr
 
 ![](./grids.jpg)
 
-Figure x: Grids
+Figure 9: Grids
 
 Our traversal algorithm is changed slightly to prioritize nodes that are less explored, i.e. if the current node is surrounded by a completely unexplored node (explored[i-1][j] = 4), it will prioritize that node instead of another one that is partly explored (explored[i+1][j] = 3). Since values for explored is only changed for nodes that have been visited or are being visited, unreachable nodes will always have an explored value of 4. Our condition for having traversed all reachable nodes is then determined by if explored holds a zero or four for all grids of the maze.
 
@@ -216,7 +218,7 @@ The treasure detection code was tuned to detect treasures within 25cm and no far
 
 ![](./TreasureTuning.jpg)
 
-Figure x: Treasure Tuning
+Figure 10: Treasure Tuning
 
 ## Cost Components
 We were given a budget of $100 to spend on our robot. The following are all the parts used on our robot that contribute towards the total cost:
@@ -250,3 +252,7 @@ Future improvements can be made in ensuring data is transmitted to the FPGA. We 
 Though our robot remained finicky until the very end, designing and assembling it taught us valuable lessons on how to integrate a physical system in a practical and compact manner.
 
 [Video](https://www.youtube.com/watch?v=oQ7_qvqLbjA) of maze exploration with display on the monitor.
+
+![](./team15TBD.jpg)
+
+Team Photo
